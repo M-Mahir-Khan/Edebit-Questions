@@ -54,9 +54,9 @@ function getVoteCount(obj){
 }
 
 // Examples
-console.log(getVoteCount({ upvotes: 13, downvotes: 0 })) //➞ 13
-console.log(getVoteCount({ upvotes: 2, downvotes: 33 })) //➞ -31
-console.log(getVoteCount({ upvotes: 132, downvotes: 132 }))// ➞ 0
+    // console.log(getVoteCount({ upvotes: 13, downvotes: 0 })) //➞ 13
+    // console.log(getVoteCount({ upvotes: 2, downvotes: 33 })) //➞ -31
+    // console.log(getVoteCount({ upvotes: 132, downvotes: 132 }))// ➞ 0
 
 
 // Q => 5 Write a function to reverse an array.
@@ -99,8 +99,8 @@ function incrementItems(arr){
 const arr = [1, 2, 3, 4, 5, 6]
 
 const [a,b] = arr;
-console.log(a === 1); // true
-console.log(b === 2); // true
+// console.log(a === 1); // true
+// console.log(b === 2); // true
 
 
 //Q => 8 Create a function that accepts an array and returns the last item in the array.
@@ -133,6 +133,188 @@ function concat(arr1,arr2){
 }
 
 // Examples
-console.log(concat([1, 3, 5], [2, 6, 8])) // ➞ [1, 3, 5, 2, 6, 8]
-console.log(concat([7, 8], [10, 9, 1, 1, 2])) // ➞ [7, 8, 10, 9, 1, 1, 2]
-console.log(concat([4, 5, 1], [3, 3, 3, 3, 3])) //➞ [4, 5, 1, 3, 3, 3, 3, 3]
+// console.log(concat([1, 3, 5], [2, 6, 8])) // ➞ [1, 3, 5, 2, 6, 8]
+// console.log(concat([7, 8], [10, 9, 1, 1, 2])) // ➞ [7, 8, 10, 9, 1, 1, 2]
+// console.log(concat([4, 5, 1], [3, 3, 3, 3, 3])) //➞ [4, 5, 1, 3, 3, 3, 3, 3]
+
+
+// Q => 11Create a function that takes an array and a string as arguments and returns the index of the string.
+
+// function findIndex(arr,str){
+//     return arr.indexOf(str);
+// }
+
+function findIndex(arr,str){
+    for(let i = 0; i <= arr.length; i++){
+        if(arr[i] === str){
+            return i
+        }
+    }
+}
+
+// Examples
+// console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")) // ➞ 2
+// console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) //➞ 1
+// console.log(findIndex(["a", "g", "y", "d"], "d")) //➞ 3
+// console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple"))// ➞ 0
+
+
+// Q => 12 Given an index and an array, return the value of the array with the given index.
+
+function valueAt(arr,index){
+    return arr[Math.floor(index)];
+}
+
+// Examples
+// console.log(valueAt([1, 2, 3, 4, 5, 6], 10 / 2)) //➞ 6
+// console.log(valueAt([1, 2, 3, 4, 5, 6], 8.0 / 2)) //➞ 5
+// console.log(valueAt([1, 2, 3, 4], 6.535355314 / 2)) //➞ 4
+
+
+// Q => 13 Create a function that finds the index of a given item.
+
+const search = (arr,i) => arr.indexOf(i);
+
+// Examples
+// console.log(search([1, 5, 3], 5)) // ➞ 1
+// console.log(search([9, 8, 3], 3)) //➞ 2
+// console.log(search([1, 2, 3], 4)) //➞ -1
+
+
+// Q => 14 Make a function thar return sum total of an array
+
+// function sumArray(arr){
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i]
+//     }
+//     return sum
+// }
+
+const sumArray = (arr) => arr.reduce((a,b) => a + b)
+
+// console.log(sumArray([1, 2, 3, 4, 5]))// ➞ 15
+// console.log(sumArray([-1, 0, 1])) //➞ 0
+// console.log(sumArray([0, 4, 8, 12])) //➞ 24
+
+// Q => 15Create a function that searches for the index of a given item in an array. If the item is present, it should return the index, otherwise, it should return -1.
+
+function search2(arr,val){
+    if(arr.includes(val)){
+        return arr.indexOf(val)
+    }else{
+        return -1
+    }
+}
+
+// Examples
+// console.log(search2([1, 2, 3, 4], 3)) //➞ 2
+// console.log(search2([2, 4, 6, 8, 10], 8))// ➞ 3
+// console.log(search2([1, 3, 5, 7, 9], 11))// ➞ -1
+
+
+// Q => 16 Write a function to check if an array contains a particular number.
+function check(arr,item){
+    return arr.includes(item)
+}
+ // Examples
+// console.log(check([1, 2, 3, 4, 5], 3)) //➞ true
+// console.log(check([1, 1, 2, 1, 1], 3)) //➞ false
+// console.log(check([5, 5, 5, 6], 5)) //➞ true
+// console.log(check([], 5)) //➞ false
+
+
+//Q => 17 Create a function that takes two numbers num1, num2, and an array arr and returns an array containing all the numbers in arr greater than num1 and less than num2.
+
+// function arrBetween(num1,num2,arr){
+//     let newarr = []
+//     for(let i =0; i<= arr.length;i++){
+//         if(arr[i] > num1 && arr[i] < num2){
+//             newarr.push(arr[i])
+//         }
+//     }
+//     return newarr
+// }
+
+function arrBetween(num1,num2,arr){
+    return arr.filter((item) => item > num1 && item < num2)
+}
+// Examples
+// console.log(arrBetween(3, 8, [1, 5, 95, 0, 4, 7])) //➞ [5, 4, 7]
+// console.log(arrBetween(1, 10, [1, 10, 25, 8, 11, 6])) //➞ [8, 6]
+// console.log(arrBetween(7, 32, [1, 2, 3, 78])) //➞ []
+
+
+
+//Q=> 18 The 50-30-20 strategy is a simple way to budget, which involves spending 50% of after-tax income on needs, 30% after tax income on wants, and 20% after-tax income on savings or paying off debt.
+// Given the after-tax income as ati, what you are supposed to do is to make a function that will return an object that shows how much a person needs to spend on needs, wants, and savings.
+
+function fiftyThirtyTwenty(ati){
+    const needs = ati * 0.5;
+    const wants = ati * 0.3;
+    const savings = ati * 0.2;
+
+    return {
+        "Needs": needs,
+        "Wants": wants,
+        "Saving": savings
+    }
+}
+
+// Examples
+// console.log(fiftyThirtyTwenty(10000)) //➞ { "Needs": 5000, "Wants": 3000, "Savings": 2000 }
+// console.log(fiftyThirtyTwenty(50000)) //➞ { "Needs": 25000, "Wants": 15000, "Savings": 10000 }
+// console.log(fiftyThirtyTwenty(13450)) //➞ { "Needs": 6725, "Wants": 4035, "Savings": 2690 }
+
+//Q=>19 Given two arrays, which represent two sandwiches, return whether both sandwiches use the same type of bread. The bread will always be found at the start and end of the array.
+
+// function hasSameBread(arr1,arr2){
+//     if(arr1[0] === arr2[0] && arr1[arr1.length -1] === arr2[arr2.length -1]){
+//         return true
+//     }else {
+//         return false
+//     }
+// }
+
+function hasSameBread (arr1,arr2){
+    return arr1[0] === arr2[0] && arr1[arr1.length -1] === arr2[arr2.length -1]
+}
+
+// Examples
+// console.log(hasSameBread(
+//   ["white bread", "lettuce", "white bread"],
+//   ["white bread", "tomato", "white bread"]
+// )) //➞ true
+
+// console.log(hasSameBread(
+//   ["brown bread", "chicken", "brown bread"],
+//   ["white bread", "chicken", "white bread"]
+// )) //➞ false
+
+// console.log(hasSameBread(
+//   ["toast", "cheese", "toast"],
+//   ["brown bread", "cheese", "toast"]
+// )) // ➞ false
+
+
+
+// Q=> 20 Create a function that takes an array of integers and strings. Convert integers to strings and return the new array.
+
+// function parseArray(arr){
+//     return arr.map((item)=> String(item))
+// }
+
+function parseArray(arr){
+    let stringArr = []
+    for(let i = 0; i< arr.length;i++){
+        stringArr.push(String(arr[i]))
+    }
+    return stringArr
+}
+
+// Examples
+console.log(parseArray([1, 2, "a", "b"])) //➞ ["1", "2", "a", "b"]
+console.log(parseArray(["abc", 123, "def", 456])) //➞ ["abc", "123", "def", "456"]
+console.log(parseArray([1, 2, 3, 17, 24, 3, "a", "123b"]))// ➞ ["1", "2", "3", "17", "24", "3", "a", "123b"]
+console.log(parseArray([])) //➞ []
+
