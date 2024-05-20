@@ -1,6 +1,6 @@
 // Q => 1 Create a function that takes an array containing only numbers and return the first element.
 
-function getFirstValue(arr){
+function getFirstValue(arr) {
     return arr[0]
 }
 // Examples
@@ -12,8 +12,8 @@ function getFirstValue(arr){
 
 // Q => 2 Given two arguments, return an array which contains these two arguments.
 
-function makePair(arg1,arg2){
-    return [arg1,arg2]
+function makePair(arg1, arg2) {
+    return [arg1, arg2]
 }
 // Examples
 // console.log(makePair(1, 2)) //➞ [1, 2]
@@ -36,7 +36,7 @@ function makePair(arg1,arg2){
 //     }
 // }
 
-function drop(arr,n){
+function drop(arr, n) {
     return arr.slice(n)
 }
 // Examples
@@ -48,15 +48,15 @@ function drop(arr,n){
 
 // Q => 4 Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
 
-function getVoteCount(obj){
+function getVoteCount(obj) {
     let sub = obj.upvotes - obj.downvotes;
     return sub
 }
 
 // Examples
-    // console.log(getVoteCount({ upvotes: 13, downvotes: 0 })) //➞ 13
-    // console.log(getVoteCount({ upvotes: 2, downvotes: 33 })) //➞ -31
-    // console.log(getVoteCount({ upvotes: 132, downvotes: 132 }))// ➞ 0
+// console.log(getVoteCount({ upvotes: 13, downvotes: 0 })) //➞ 13
+// console.log(getVoteCount({ upvotes: 2, downvotes: 33 })) //➞ -31
+// console.log(getVoteCount({ upvotes: 132, downvotes: 132 }))// ➞ 0
 
 
 // Q => 5 Write a function to reverse an array.
@@ -73,8 +73,8 @@ const reverse = (arr) => arr.reverse();
 
 // const incrementItems = (arr) => arr.map(item => item +1) 
 
-function incrementItems(arr){
-    for(let i = 0; i < arr.length;i++){
+function incrementItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
         arr[i] += 1
     }
     return arr
@@ -98,14 +98,14 @@ function incrementItems(arr){
 
 const arr = [1, 2, 3, 4, 5, 6]
 
-const [a,b] = arr;
+const [a, b] = arr;
 // console.log(a === 1); // true
 // console.log(b === 2); // true
 
 
 //Q => 8 Create a function that accepts an array and returns the last item in the array.
 
-function getLastItem(arr){
+function getLastItem(arr) {
     return arr.pop()
 }
 
@@ -117,7 +117,7 @@ function getLastItem(arr){
 
 //Q => 9 Create a function that takes an array of numbers or letters and returns a string.
 
-function arrayToString(arr){
+function arrayToString(arr) {
     return arr.join()
 }
 // Examples
@@ -128,7 +128,7 @@ function arrayToString(arr){
 
 // Q => 10 Create a function to concatenate two integer arrays.
 
-function concat(arr1,arr2){
+function concat(arr1, arr2) {
     return arr1.concat(arr2)
 }
 
@@ -144,9 +144,9 @@ function concat(arr1,arr2){
 //     return arr.indexOf(str);
 // }
 
-function findIndex(arr,str){
-    for(let i = 0; i <= arr.length; i++){
-        if(arr[i] === str){
+function findIndex(arr, str) {
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] === str) {
             return i
         }
     }
@@ -161,7 +161,7 @@ function findIndex(arr,str){
 
 // Q => 12 Given an index and an array, return the value of the array with the given index.
 
-function valueAt(arr,index){
+function valueAt(arr, index) {
     return arr[Math.floor(index)];
 }
 
@@ -173,7 +173,7 @@ function valueAt(arr,index){
 
 // Q => 13 Create a function that finds the index of a given item.
 
-const search = (arr,i) => arr.indexOf(i);
+const search = (arr, i) => arr.indexOf(i);
 
 // Examples
 // console.log(search([1, 5, 3], 5)) // ➞ 1
@@ -191,7 +191,7 @@ const search = (arr,i) => arr.indexOf(i);
 //     return sum
 // }
 
-const sumArray = (arr) => arr.reduce((a,b) => a + b)
+const sumArray = (arr) => arr.reduce((a, b) => a + b)
 
 // console.log(sumArray([1, 2, 3, 4, 5]))// ➞ 15
 // console.log(sumArray([-1, 0, 1])) //➞ 0
@@ -199,10 +199,10 @@ const sumArray = (arr) => arr.reduce((a,b) => a + b)
 
 // Q => 15Create a function that searches for the index of a given item in an array. If the item is present, it should return the index, otherwise, it should return -1.
 
-function search2(arr,val){
-    if(arr.includes(val)){
+function search2(arr, val) {
+    if (arr.includes(val)) {
         return arr.indexOf(val)
-    }else{
+    } else {
         return -1
     }
 }
@@ -214,10 +214,10 @@ function search2(arr,val){
 
 
 // Q => 16 Write a function to check if an array contains a particular number.
-function check(arr,item){
+function check(arr, item) {
     return arr.includes(item)
 }
- // Examples
+// Examples
 // console.log(check([1, 2, 3, 4, 5], 3)) //➞ true
 // console.log(check([1, 1, 2, 1, 1], 3)) //➞ false
 // console.log(check([5, 5, 5, 6], 5)) //➞ true
@@ -236,7 +236,7 @@ function check(arr,item){
 //     return newarr
 // }
 
-function arrBetween(num1,num2,arr){
+function arrBetween(num1, num2, arr) {
     return arr.filter((item) => item > num1 && item < num2)
 }
 // Examples
@@ -249,7 +249,7 @@ function arrBetween(num1,num2,arr){
 //Q=> 18 The 50-30-20 strategy is a simple way to budget, which involves spending 50% of after-tax income on needs, 30% after tax income on wants, and 20% after-tax income on savings or paying off debt.
 // Given the after-tax income as ati, what you are supposed to do is to make a function that will return an object that shows how much a person needs to spend on needs, wants, and savings.
 
-function fiftyThirtyTwenty(ati){
+function fiftyThirtyTwenty(ati) {
     const needs = ati * 0.5;
     const wants = ati * 0.3;
     const savings = ati * 0.2;
@@ -276,8 +276,8 @@ function fiftyThirtyTwenty(ati){
 //     }
 // }
 
-function hasSameBread (arr1,arr2){
-    return arr1[0] === arr2[0] && arr1[arr1.length -1] === arr2[arr2.length -1]
+function hasSameBread(arr1, arr2) {
+    return arr1[0] === arr2[0] && arr1[arr1.length - 1] === arr2[arr2.length - 1]
 }
 
 // Examples
@@ -304,9 +304,9 @@ function hasSameBread (arr1,arr2){
 //     return arr.map((item)=> String(item))
 // }
 
-function parseArray(arr){
+function parseArray(arr) {
     let stringArr = []
-    for(let i = 0; i< arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
         stringArr.push(String(arr[i]))
     }
     return stringArr
@@ -321,8 +321,8 @@ function parseArray(arr){
 
 //Q=> 21 Create a function that takes an array and returns the types of values (data types) in a new array.
 
-function arrayValuesTypes(arr){
-    return arr.map((item)=> typeof item)
+function arrayValuesTypes(arr) {
+    return arr.map((item) => typeof item)
 }
 
 // // Examples
@@ -343,15 +343,15 @@ function arrayValuesTypes(arr){
 // But how could I make tail = [2, 3, 4] instead of tail = 2?
 
 // solution
-var [head,...tail] = [1,2,3,4];
+var [head, ...tail] = [1, 2, 3, 4];
 // console.log(head);
 // console.log(tail);
 
 
 //Q => 23 Create a function that takes as a parameter an array of "stringified" numbers and returns an array of numbers.
 
-function toNumberArray(arr){
-    return arr.map((item)=> Number(item));
+function toNumberArray(arr) {
+    return arr.map((item) => Number(item));
 }
 // Example:
 // console.log(toNumberArray(["9.4", "4.2"])) //➞ [9.4, 4.2]
@@ -361,8 +361,8 @@ function toNumberArray(arr){
 
 //Q => 24 Create a function that takes an array of two numbers and checks if the square root of the first number is equal to the cube root of the second number.
 
-function checkSquareAndCube(arr){
-    return Math.sqrt(arr[0]) === Math.pow(arr[1], 1/3)
+function checkSquareAndCube(arr) {
+    return Math.sqrt(arr[0]) === Math.pow(arr[1], 1 / 3)
 }
 
 // Examples
@@ -373,7 +373,7 @@ function checkSquareAndCube(arr){
 
 //Q => 25 You call your spouse in anger and a "little" argument takes place. Count the total amount of insults used. Given an object of insults, return the total amount of insults used.
 
-function totalAmountAdjectives(obj){
+function totalAmountAdjectives(obj) {
     return Object.keys(obj).length;
 }
 // Examples
@@ -392,9 +392,9 @@ let [eyes, nose, , ears] = arr1;
 
 //Q=> 27 Create a function which returns the length of a string, WITHOUT using String.length property.
 
-function length(str){
+function length(str) {
     let count = 0;
-    for(let length of str){
+    for (let length of str) {
         count++
     }
     return count
@@ -408,7 +408,7 @@ function length(str){
 
 //Q=>28 Create a function that takes a number and return an array of three numbers: half of the number, quarter of the number and an eighth of the number.
 
-function halfQuarterEighth(num){
+function halfQuarterEighth(num) {
     return [num / 2, num / 4, num / 8]
 }
 
@@ -431,8 +431,8 @@ function halfQuarterEighth(num){
 // 9	"nonagon"
 // 10	"decagon"
 
-function nSidedShape(n){
-    let shapes = ["circle","semi-circle","triangle","square","pentagon","hexagon","heptagon","heptagon","octagon","nonagon","decagon"];
+function nSidedShape(n) {
+    let shapes = ["circle", "semi-circle", "triangle", "square", "pentagon", "hexagon", "heptagon", "heptagon", "octagon", "nonagon", "decagon"];
     return shapes[n - 1]
 }
 // Examples
@@ -442,7 +442,7 @@ function nSidedShape(n){
 
 //Q => 30 Create a function that takes an array with numbers and return an array with the elements multiplied by two.
 
-function getMultipliedArr(arr){
+function getMultipliedArr(arr) {
     return arr.map(item => item * 2)
 }
 // // Examples
@@ -453,7 +453,7 @@ function getMultipliedArr(arr){
 
 //Q=> 31 Create a function that takes an array of words and transforms it into an array of each word's length.
 
-function wordLengths(arr){
+function wordLengths(arr) {
     return arr.map((str) => str.length)
 }
 
@@ -471,16 +471,16 @@ function wordLengths(arr){
 
 // Given an array that contains the fulcrum "f", the effort "e", and the load "l", write a function that determines whether or not the array shows a first class lever, second class lever, or a third class lever.
 
-function determineLever(arr){
+function determineLever(arr) {
     const fulcrumIndex = arr.indexOf("f");
     const effortIndex = arr.indexOf("e");
     const loadIndex = arr.indexOf("l");
 
-    if(fulcrumIndex === 1){
+    if (fulcrumIndex === 1) {
         return "first class lever"
-    }else if(fulcrumIndex === 2){
+    } else if (fulcrumIndex === 2) {
         return "second class lever"
-    }else if(fulcrumIndex === 0){
+    } else if (fulcrumIndex === 0) {
         return "third class lever"
     }
 }
@@ -492,7 +492,7 @@ function determineLever(arr){
 
 //Q => 33 Create a function that takes a string and returns a string with spaces in between all of the characters.
 
-function spaceMeOut(str){
+function spaceMeOut(str) {
     let charactersArray = str.split('')
     let spaceString = charactersArray.join(' ')
     return spaceString;
@@ -532,7 +532,7 @@ const [trans1, trans2, [trans3, [trans4]]] = arr2;
 
 // For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
 
-function findDifference(a,b){
+function findDifference(a, b) {
     let volumeOfA = a[0] * a[1] * a[2];
     let volumeOfB = b[0] * b[1] * b[2];
 
@@ -548,8 +548,8 @@ function findDifference(a,b){
 
 //Q=>36 Create a function that takes an array and returns the sum of all numbers in the array.
 
-function getSumOfItems(arr){
-    return arr.reduce((acc,curr) => acc + curr )
+function getSumOfItems(arr) {
+    return arr.reduce((acc, curr) => acc + curr)
 }
 
 // Examples
@@ -569,9 +569,9 @@ function getSumOfItems(arr){
 // console.log(evenOrOdd([]) ) //➞ "even"
 // console.log(evenOrOdd([0, 1, 5])) // ➞ "even"
 
-function evenOrOdd(arr){
+function evenOrOdd(arr) {
     let sum = 0;
-    for(let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
         sum += arr[i]
     }
     // let sum = arr.reduce((acc,curr) => acc + curr);
@@ -580,19 +580,19 @@ function evenOrOdd(arr){
 
 //Q => 38 Create a function that takes an array of numbers arr and returns an inverted array.
 
-function invertArray(arr){
+function invertArray(arr) {
     return arr.map(num => -num)
 }
 // Example
-console.log(invertArray([1, 2, 3, 4, 5])) //➞ [-1, -2, -3, -4, -5]
-console.log(invertArray([1, -2, 3, -4, 5])) // ➞ [-1, 2, -3, 4, -5]
-console.log(invertArray([])) // ➞ []
+// console.log(invertArray([1, 2, 3, 4, 5])) //➞ [-1, -2, -3, -4, -5]
+// console.log(invertArray([1, -2, 3, -4, 5])) // ➞ [-1, 2, -3, 4, -5]
+// console.log(invertArray([])) // ➞ []
 
 
 //Q=> 39 Given an array, rotate the values clockwise by one (the last value is sent to the first position).
 // Check the examples for a better understanding.
 
-function rotateByOne(arr){  
+function rotateByOne(arr) {
     const lastElement = arr.pop();
     arr.unshift(lastElement);
     return arr
@@ -606,7 +606,7 @@ function rotateByOne(arr){
 
 //Q=>40 Create a function that returns the selected filename from a path. Include the extension in your answer.
 
-function getFilename(path){
+function getFilename(path) {
     const parts = path.split(/[/\\]/);
     return parts[parts.length - 1];
 }
@@ -621,9 +621,9 @@ function getFilename(path){
 // cola
 // fanta
 
-function skipTooMuchSugarDrinks(arr){
-    return arr.filter((item)=>{
-        if(item !== "cola" && item !== "fanta"){
+function skipTooMuchSugarDrinks(arr) {
+    return arr.filter((item) => {
+        if (item !== "cola" && item !== "fanta") {
             return item
         }
     })
@@ -636,9 +636,9 @@ function skipTooMuchSugarDrinks(arr){
 
 //Q => 42 Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
 
-function addIndexes(arr){
-    
-    return arr.map((item,index)=> item + index);
+function addIndexes(arr) {
+
+    return arr.map((item, index) => item + index);
 }
 
 // Examples
@@ -649,28 +649,144 @@ function addIndexes(arr){
 
 //Q => 43 Create a function that returns an array of all the integers between two given numbers start and end.
 
-function rangeOfNum(start,end){
+function rangeOfNum(start, end) {
     let arr = [];
-    for(let i = start; i< end; i++){
+    for (let i = start; i < end; i++) {
         arr.push(i)
     }
     return arr
 }
 
 // Examples
-console.log(rangeOfNum(2, 4) ) // ➞ [3]
-console.log(rangeOfNum(5, 9) ) // ➞ [6, 7, 8]
-console.log(rangeOfNum(2, 11)) // ➞ [3, 4, 5, 6, 7, 8, 9, 10]
+// console.log(rangeOfNum(2, 4)) // ➞ [3]
+// console.log(rangeOfNum(5, 9)) // ➞ [6, 7, 8]
+// console.log(rangeOfNum(2, 11)) // ➞ [3, 4, 5, 6, 7, 8, 9, 10]
 
 
 //Q=>44 Write a function that returns the sum of elements greater than 5, in the given array .
 
-function sumFive(arr){
+function sumFive(arr) {
     return arr
-    .filter(item => item > 5)
-    .reduce((acc,curr) => acc + curr,0)
+        .filter(item => item > 5)
+        .reduce((acc, curr) => acc + curr, 0)
 }
 // Examples
-console.log(sumFive([1, 5, 20, 30, 4, 9, 18]))// ➞ 77
-console.log(sumFive([1, 2, 3, 4]))// ➞ 0
-console.log(sumFive([10, 12, 28, 47, 55, 100]))// ➞ 252
+// console.log(sumFive([1, 5, 20, 30, 4, 9, 18]))// ➞ 77  
+// console.log(sumFive([1, 2, 3, 4]))// ➞ 0
+// console.log(sumFive([10, 12, 28, 47, 55, 100]))// ➞ 252
+
+//Q=>45 Create a function that takes an array of strings and numbers, and filters out the array so that it returns an array of integers only.
+
+function filterArray(arr) {
+    return arr.filter(item => typeof item === "number")
+
+}
+// Examples
+// console.log(filterArray([1, 2, 3,, "a", "b", 4])) // ➞ [1, 2, 3, 4]
+// console.log(filterArray(["A", 0, "Edabit", 1729, "Python", "1729"]))// ➞ [0, 1729]
+// console.log(filterArray(["Nothing", "here"]))// ➞ []
+
+
+
+//Q=>46 In mathematics and digital electronics, a binary number is a number expressed in the base-2 numeral system or binary numeral system. Given an array of ones and zeroes of a binary number, return the equivalent decimal value.
+
+function binaryToDecimal(arr){
+
+}
+// Examples
+// console.log(binaryToDecimal([0, 0, 0, 1]))// ➞ 1
+// console.log(binaryToDecimal([0, 0, 1, 0]))// ➞ 2
+// console.log(binaryToDecimal([1, 1, 1, 1,1, 0, 1, 1, 0, 1]))// ➞ 1005
+
+
+//Q =>47 The insurance guy calls again. Apparently, they were informed by your spouse that some items were not stolen at all and you failed to mention this detail to them. This is a fraud attempt! You freeze and mumble something unintelligible. Find out what you said.
+// Given an object, return a string that concatenates all the values and adds the 2nd key at the end. Make sure you keep an empty space between them but not at the beginning or end of the string. Look at the examples for a clearer picture.
+
+function sayWhat(obj){
+    const secondKey = obj[2];
+
+    const allValues = Object.keys(obj).map(key => obj[key])
+    const valueJoin = allValues.join(" ");
+
+    return `${valueJoin} ${secondKey}`
+
+}
+
+// Examples
+// console.log(sayWhat({ 1: "Mommy", 2: "please", 3: "help" }))// ➞ "Mommy please help please"
+// console.log(sayWhat({ 1: "Me", 2: "innocent", 3: "is" })) //➞ "Me innocent is innocent"
+// console.log(sayWhat({ 1: "Must", 2: "lawyer", 3: "call" })) //➞ "Must lawyer call lawyer"
+
+
+//Q=>48 According to the lodash documentation, _.fill Fills elements of an array with the value from start to, but not including, end. Note that this method mutates the array.
+// This challenge requires you to write your own version of this function without using lodash so that you can better understand it works.
+
+// Arguments
+// array (Array): The array to fill.
+// value (*): The value to fill array with.
+// [start=0] (number): The start position.
+// [end=array.length] (number): The end position.
+// Returns
+// (Array): Returns array.
+
+function fill(array,val,start,end){
+  return array.fill(val,start,end)
+}
+
+
+// Examples
+var array = [1, 2, 3]
+console.log(fill(array, "a") )//➞ ["a", "a", "a"]
+console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
+console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
+
+
+//Q => 49 Write a function that accepts the width and height (m, n) and an optional proc s and generates an array with elements. Each element is a string consisting of either:
+
+// The default character (hash #) repeating n times (if no proc is given).
+// The character passed in through the proc repeating n times.
+
+function makeRug(m,n,s = "#"){
+    let arr = [];
+    for(let i = 0 ; i < m; i++){
+        arr.push(s.repeat(n))
+    }
+    return arr
+}
+
+// Examples
+console.log(makeRug(3, 5)) //➞ [
+//   "#####",
+//   "#####",
+//   "#####"
+// ]
+
+console.log(makeRug(3, 5, '$') )// ➞ [
+//   "$$$$$",
+//   "$$$$$",
+//   "$$$$$"
+// ]
+
+console.log(makeRug(2, 2, 'A') )// ➞ [
+//   "AA",
+//   "AA"
+// ]
+
+
+//Q => 50 Given a letter and an array of words, return whether the letter does not appear in any of the words.
+
+function forbiddenLetter(letter,arr){
+    for(let word of arr){
+        if(word.includes(letter)){
+            return true
+        }
+    }
+    return false
+}
+
+// Examples
+console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
+console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
+console.log(forbiddenLetter("m", []) ) //➞ true
+
+
