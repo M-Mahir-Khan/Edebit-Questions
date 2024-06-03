@@ -108,3 +108,14 @@ function stringInt(str){
 console.log(stringInt("6")) //s ➞ 6
 console.log(stringInt("1000")) //s ➞ 1000
 console.log(stringInt("12") ) //s➞ 12
+
+// Q => 11 Create a function that evaluates an equation.
+
+function eq(equation){
+    return eval(equation)
+}
+
+// Examples
+// console.log(eq("1+2"))// ➞ 3
+// console.log(eq("6/(9-7)"))// ➞ 3
+// console.log(eq("3+2-4"))// ➞ 1
