@@ -119,3 +119,30 @@ function eq(equation){
 // console.log(eq("1+2"))// ➞ 3
 // console.log(eq("6/(9-7)"))// ➞ 3
 // console.log(eq("3+2-4"))// ➞ 1
+
+// Write a template string according to the following example:
+
+// Example
+const a = "John";
+const b = "Joe";
+const c = "Jack";
+const template = `Their names were: ${a}, ${b} and ${c}`// ➞ "Their names were:  John,  Joe  and  Jack."
+
+
+// Q => 13 Given a string, return true if its length is even or false if the length is odd.
+
+function oddOrEven(str){
+    const strLenght = str.length
+    return strLenght % 2 === 0 
+}
+
+// Examples
+console.log(oddOrEven("apples")) //➞ true
+// The word "apples" has 6 characters.
+// 6 is an even number, so the program outputs true.
+
+console.log(oddOrEven("pears")) //➞ false
+// "pears" has 5 letters, and 5 is odd.
+// Therefore the program outputs false.
+
+console.log(oddOrEven("cherry")) //➞ true
