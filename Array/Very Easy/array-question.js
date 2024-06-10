@@ -690,7 +690,7 @@ function filterArray(arr) {
 
 //Q=>46 In mathematics and digital electronics, a binary number is a number expressed in the base-2 numeral system or binary numeral system. Given an array of ones and zeroes of a binary number, return the equivalent decimal value.
 
-function binaryToDecimal(arr){
+function binaryToDecimal(arr) {
 
 }
 // Examples
@@ -702,7 +702,7 @@ function binaryToDecimal(arr){
 //Q =>47 The insurance guy calls again. Apparently, they were informed by your spouse that some items were not stolen at all and you failed to mention this detail to them. This is a fraud attempt! You freeze and mumble something unintelligible. Find out what you said.
 // Given an object, return a string that concatenates all the values and adds the 2nd key at the end. Make sure you keep an empty space between them but not at the beginning or end of the string. Look at the examples for a clearer picture.
 
-function sayWhat(obj){
+function sayWhat(obj) {
     const secondKey = obj[2];
 
     const allValues = Object.keys(obj).map(key => obj[key])
@@ -729,14 +729,14 @@ function sayWhat(obj){
 // Returns
 // (Array): Returns array.
 
-function fill(array,val,start,end){
-  return array.fill(val,start,end)
+function fill(array, val, start, end) {
+    return array.fill(val, start, end)
 }
 
 
 // Examples
 var array = [1, 2, 3]
-console.log(fill(array, "a") )//➞ ["a", "a", "a"]
+console.log(fill(array, "a"))//➞ ["a", "a", "a"]
 console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
 console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
 
@@ -746,9 +746,9 @@ console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
 // The default character (hash #) repeating n times (if no proc is given).
 // The character passed in through the proc repeating n times.
 
-function makeRug(m,n,s = "#"){
+function makeRug(m, n, s = "#") {
     let arr = [];
-    for(let i = 0 ; i < m; i++){
+    for (let i = 0; i < m; i++) {
         arr.push(s.repeat(n))
     }
     return arr
@@ -756,18 +756,19 @@ function makeRug(m,n,s = "#"){
 
 // Examples
 console.log(makeRug(3, 5)) //➞ [
-//   "#####",
+//   "#####",//   "#####",
+
 //   "#####",
 //   "#####"
 // ]
 
-console.log(makeRug(3, 5, '$') )// ➞ [
+console.log(makeRug(3, 5, '$'))// ➞ [
 //   "$$$$$",
 //   "$$$$$",
 //   "$$$$$"
 // ]
 
-console.log(makeRug(2, 2, 'A') )// ➞ [
+console.log(makeRug(2, 2, 'A'))// ➞ [
 //   "AA",
 //   "AA"
 // ]
@@ -775,9 +776,9 @@ console.log(makeRug(2, 2, 'A') )// ➞ [
 
 //Q => 50 Given a letter and an array of words, return whether the letter does not appear in any of the words.
 
-function forbiddenLetter(letter,arr){
-    for(let word of arr){
-        if(word.includes(letter)){
+function forbiddenLetter(letter, arr) {
+    for (let word of arr) {
+        if (word.includes(letter)) {
             return true
         }
     }
@@ -787,6 +788,50 @@ function forbiddenLetter(letter,arr){
 // Examples
 console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
 console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
-console.log(forbiddenLetter("m", []) ) //➞ true
+console.log(forbiddenLetter("m", [])) //➞ true
 
+
+
+// Q => 51 You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
+
+function birthdayCakeCandles(candles) {
+    let maxNum = Math.max(...candles)
+    let maxCandel = candles.filter(item => item === maxNum)
+    return maxCandel.length
+}
+
+// Examples
+console.log(birthdayCakeCandles([4, 4, 1, 3]))//➞ 2
+// The maximum height candles are four units high.
+// There are two of them, so you return 2.
+
+console.log(birthdayCakeCandles([3, 2, 1, 3]))// ➞ 2
+console.log(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]))// ➞ 4
+
+// Create a function that takes an array. This array will contain numbers represented as strings.
+
+// Your function should split this array into two new arrays. The first array should contain only even numbers. The second only odd. Then, wrap these two arrays in one main array and return it.
+
+// Return an empty array if there are no even numbers, or odd.
+
+
+function cleanUpArray(arr) {
+    let newarr = [[], []]
+    arr.forEach(item => {
+        if (item % 2 == 0) {
+            newarr[0].push(item)
+        }
+        else {
+            newarr[1].push(item)
+        }
+
+    })
+    return newarr
+}
+
+// Examples
+console.log(cleanUpArray(["8"]))// ➞ [[8], []]
+console.log(cleanUpArray(["11"])) //➞ [[], [11]]
+console.log(cleanUpArray(["7", "4", "8"]))// ➞ [[4, 8], [7]]
+console.log(cleanUpArray(["9", "4", "5", "8"])) //➞ [[4, 8], [9, 5]]
 
