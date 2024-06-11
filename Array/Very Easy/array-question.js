@@ -736,9 +736,9 @@ function fill(array, val, start, end) {
 
 // Examples
 var array = [1, 2, 3]
-console.log(fill(array, "a"))//➞ ["a", "a", "a"]
-console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
-console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
+// console.log(fill(array, "a"))//➞ ["a", "a", "a"]
+// console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
+// console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
 
 
 //Q => 49 Write a function that accepts the width and height (m, n) and an optional proc s and generates an array with elements. Each element is a string consisting of either:
@@ -786,9 +786,9 @@ function forbiddenLetter(letter, arr) {
 }
 
 // Examples
-console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
-console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
-console.log(forbiddenLetter("m", [])) //➞ true
+// console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
+// console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
+// console.log(forbiddenLetter("m", [])) //➞ true
 
 
 
@@ -801,12 +801,12 @@ function birthdayCakeCandles(candles) {
 }
 
 // Examples
-console.log(birthdayCakeCandles([4, 4, 1, 3]))//➞ 2
+// console.log(birthdayCakeCandles([4, 4, 1, 3]))//➞ 2
 // The maximum height candles are four units high.
 // There are two of them, so you return 2.
 
-console.log(birthdayCakeCandles([3, 2, 1, 3]))// ➞ 2
-console.log(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]))// ➞ 4
+// console.log(birthdayCakeCandles([3, 2, 1, 3]))// ➞ 2
+// console.log(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]))// ➞ 4
 
 // Create a function that takes an array. This array will contain numbers represented as strings.
 
@@ -830,8 +830,45 @@ function cleanUpArray(arr) {
 }
 
 // Examples
-console.log(cleanUpArray(["8"]))// ➞ [[8], []]
-console.log(cleanUpArray(["11"])) //➞ [[], [11]]
-console.log(cleanUpArray(["7", "4", "8"]))// ➞ [[4, 8], [7]]
-console.log(cleanUpArray(["9", "4", "5", "8"])) //➞ [[4, 8], [9, 5]]
+// console.log(cleanUpArray(["8"]))// ➞ [[8], []]
+// console.log(cleanUpArray(["11"])) //➞ [[], [11]]
+// console.log(cleanUpArray(["7", "4", "8"]))// ➞ [[4, 8], [7]]
+// console.log(cleanUpArray(["9", "4", "5", "8"])) //➞ [[4, 8], [9, 5]]
+
+
+// Create a function that takes two arguments of an array of numbers arr and a constant number n and returns the n largest numbers from the given array.
+function largestNumbers(n,arr){
+    arr.sort((a,b) => b - a)
+    const result = arr.slice(0,n)
+    return result;
+}
+
+// Examples
+// console.log(largestNumbers(2, [4, 3, 2, 1]) )//➞ [3, 4]
+// console.log(largestNumbers(1, [7, 19, 4, 2]))// ➞ [19]
+// console.log(largestNumbers(3, [14, 12, 57, 11, 18, 16]))//W ➞ [16, 18, 57]
+// console.log(largestNumbers(0, [1, 3, 4, 2]) )//➞ []
+
+// Create a function that finds each factor of a given number n. Your solution should return an array of the number(s) that meet this criteria.
+
+function findFactors(n){
+    let factor = [];
+    for(let i = 0; i < n ; i++){
+        if(n % i === 0){
+            factor.push(i)
+        }
+    }
+    return factor 
+}
+
+// Examples
+console.log(findFactors(9) )// ➞ [1, 3, 9]
+// 9 has three factors 1, 3 and 9
+
+// console.log(findFactors(12))// ➞ [1, 2, 3, 4, 6, 12]
+// console.log(findFactors(20))// ➞ [1, 2, 4, 5, 10, 20]
+// console.log(findFactors(0) )// ➞ []
+// 0 has no factors
+
+
 
