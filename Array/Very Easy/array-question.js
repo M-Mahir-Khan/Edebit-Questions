@@ -23,18 +23,17 @@ function makePair(arg1, arg2) {
 
 
 // Q => 3 According to the lodash documentation, _.drop creates a slice of an array with n elements dropped from the beginning.
-
 // Your challenge is to write your own version using vanilla JavaScript.
 
-// function drop(arr,n){
-//     if(n >= arr.length){
-//         return []
-//     } else if (n <= 0){
-//         return arr.slice
-//     }else{
-//         return arr.slice(n)
-//     }
-// }
+function drop(arr,n){
+    if(n >= arr.length){
+        return []
+    } else if (n <= 0){
+        return arr.slice
+    }else{
+        return arr.slice(n)
+    }
+}
 
 function drop(arr, n) {
     return arr.slice(n)
