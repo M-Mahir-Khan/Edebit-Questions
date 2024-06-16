@@ -223,7 +223,7 @@ function skipTooMuchSugarDrinks(arr){
 function skipTooMuchSugarDrinks(arr) {
     let res = [];
     arr.forEach(item => {
-        if (item !== "cola" && item !== "fanta") {
+        if (item !== "cola" && item !== "fanta") {  
             res.push(item);
         }
     });
