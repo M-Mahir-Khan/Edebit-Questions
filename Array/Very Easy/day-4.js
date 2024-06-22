@@ -168,8 +168,8 @@ function makeRug(m, n, s = "#") {
 
 // Examples
 console.log(makeRug(3, 5)) //➞ [
-//   "#####",//   "#####",
-
+//   "#####",
+//   "#####",
 //   "#####",
 //   "#####"
 // ]
@@ -228,9 +228,3 @@ function birthdayCakeCandles(candels){
 
 console.log(birthdayCakeCandles([3, 2, 1, 3]))// ➞ 2
 console.log(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25]))// ➞ 4
-
-// Create a function that takes an array. This array will contain numbers represented as strings.
-
-// Your function should split this array into two new arrays. The first array should contain only even numbers. The second only odd. Then, wrap these two arrays in one main array and return it.
-
-// Return an empty array if there are no even numbers, or odd.
