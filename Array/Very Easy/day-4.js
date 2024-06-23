@@ -37,9 +37,9 @@ function rangeOfNum(start, end) {
 
 
 // Examples
-// console.log(rangeOfNum(2, 4)) // ➞ [3]
-// console.log(rangeOfNum(5, 9)) // ➞ [6, 7, 8]
-// console.log(rangeOfNum(2, 11)) // ➞ [3, 4, 5, 6, 7, 8, 9, 10]
+console.log(rangeOfNum(2, 4)) // ➞ [3]
+console.log(rangeOfNum(5, 9)) // ➞ [6, 7, 8]
+console.log(rangeOfNum(2, 11)) // ➞ [3, 4, 5, 6, 7, 8, 9, 10]
 
 //Q=>44 Write a function that returns the sum of elements greater than 5, in the given array .
 
@@ -103,9 +103,9 @@ function binaryToDecimal(arr) {
     return parseInt(result, 2);
 }
 // Examples
-// console.log(binaryToDecimal([0, 0, 0, 1]))// ➞ 1
-// console.log(binaryToDecimal([0, 0, 1, 0]))// ➞ 2
-// console.log(binaryToDecimal([1, 1, 1, 1,1, 0, 1, 1, 0, 1]))// ➞ 1005
+console.log(binaryToDecimal([0, 0, 0, 1]))// ➞ 1
+console.log(binaryToDecimal([0, 0, 1, 0]))// ➞ 2
+console.log(binaryToDecimal([1, 1, 1, 1,1, 0, 1, 1, 0, 1]))// ➞ 1005
 
 //Q =>47 The insurance guy calls again. Apparently, they were informed by your spouse that some items were not stolen at all and you failed to mention this detail to them. This is a fraud attempt! You freeze and mumble something unintelligible. Find out what you said.
 // Given an object, return a string that concatenates all the values and adds the 2nd key at the end. Make sure you keep an empty space between them but not at the beginning or end of the string. Look at the examples for a clearer picture.
@@ -121,9 +121,9 @@ function sayWhat(obj) {
 }
 
 // Examples
-// console.log(sayWhat({ 1: "Mommy", 2: "please", 3: "help" }))// ➞ "Mommy please help please"
-// console.log(sayWhat({ 1: "Me", 2: "innocent", 3: "is" })) //➞ "Me innocent is innocent"
-// console.log(sayWhat({ 1: "Must", 2: "lawyer", 3: "call" })) //➞ "Must lawyer call lawyer"
+console.log(sayWhat({ 1: "Mommy", 2: "please", 3: "help" }))// ➞ "Mommy please help please"
+console.log(sayWhat({ 1: "Me", 2: "innocent", 3: "is" })) //➞ "Me innocent is innocent"
+console.log(sayWhat({ 1: "Must", 2: "lawyer", 3: "call" })) //➞ "Must lawyer call lawyer"
 
 //Q=>48 According to the lodash documentation, _.fill Fills elements of an array with the value from start to, but not including, end. Note that this method mutates the array.
 // This challenge requires you to write your own version of this function without using lodash so that you can better understand it works.
@@ -142,9 +142,9 @@ function fill(array, val, start, end) {
 
 // Examples
 var array = [1, 2, 3]
-// console.log(fill(array, "a"))//➞ ["a", "a", "a"]
-// console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
-// console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
+console.log(fill(array, "a"))//➞ ["a", "a", "a"]
+console.log(fill(Array(3), 2))// ➞ [2, 2, 2]
+console.log(fill([4, 6, 8, 10], "*", 1, 3)) // ➞ [4, "*", "*", 10]
 
 
 
@@ -199,9 +199,9 @@ function forbiddenLetter(letter, arr) {
 
 
 // Examples
-// console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
-// console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
-// console.log(forbiddenLetter("m", [])) //➞ true
+console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) //s➞ false
+console.log(forbiddenLetter("a", ["spoon", "fork", "knife"]))// ➞ true
+console.log(forbiddenLetter("m", [])) //➞ true
 
 
 // Q => 51 You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.

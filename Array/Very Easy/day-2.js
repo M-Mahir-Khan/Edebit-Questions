@@ -48,10 +48,10 @@ function parseArray(arr) {
 }
 
 // Examples
-// console.log(parseArray([1, 2, "a", "b"])) //➞ ["1", "2", "a", "b"]
-// console.log(parseArray(["abc", 123, "def", 456])) //➞ ["abc", "123", "def", "456"]
-// console.log(parseArray([1, 2, 3, 17, 24, 3, "a", "123b"]))// ➞ ["1", "2", "3", "17", "24", "3", "a", "123b"]
-// console.log(parseArray([])) //➞ []
+console.log(parseArray([1, 2, "a", "b"])) //➞ ["1", "2", "a", "b"]
+console.log(parseArray(["abc", 123, "def", 456])) //➞ ["abc", "123", "def", "456"]
+console.log(parseArray([1, 2, 3, 17, 24, 3, "a", "123b"]))// ➞ ["1", "2", "3", "17", "24", "3", "a", "123b"]
+console.log(parseArray([])) //➞ []
 
 //Q=> 21 Create a function that takes an array and returns the types of values (data types) in a new array.
 
@@ -102,9 +102,9 @@ function toNumberArray(arr){
     }
 }
 // Example:
-// console.log(toNumberArray(["9.4", "4.2"])) //➞ [9.4, 4.2]
-// console.log(toNumberArray(["91", "44"])) //➞ [91, 44]
-// console.log(toNumberArray(["9.5", "8.8"])) //➞ [9.5, 8.8]
+console.log(toNumberArray(["9.4", "4.2"])) //➞ [9.4, 4.2]
+console.log(toNumberArray(["91", "44"])) //➞ [91, 44]
+console.log(toNumberArray(["9.5", "8.8"])) //➞ [9.5, 8.8]
 
 //Q => 24 Create a function that takes an array of two numbers and checks if the square root of the first number is equal to the cube root of the second number.
 
@@ -115,9 +115,9 @@ function checkSquareAndCube(arr) {
 
 
 // Examples
-// console.log(checkSquareAndCube([4, 8]))//➞ true
-// console.log(checkSquareAndCube([16, 48])) //➞ false
-// console.log(checkSquareAndCube([9, 27])) //➞ true
+console.log(checkSquareAndCube([4, 8]))//➞ true
+console.log(checkSquareAndCube([16, 48])) //➞ false
+console.log(checkSquareAndCube([9, 27])) //➞ true
 
 
 //Q => 25 You call your spouse in anger and a "little" argument takes place. Count the total amount of insults used. Given an object of insults, return the total amount of insults used.
@@ -189,9 +189,9 @@ function length(str){
 
 
 // Examples
-// console.log(length("Hello World")) //➞ 11
-// console.log(length("Edabit")) //➞ 6
-// console.log(length("wash your hands!")) //➞ 16
+console.log(length("Hello World")) //➞ 11
+console.log(length("Edabit")) //➞ 6
+console.log(length("wash your hands!")) //➞ 16
 
 //Q=>28 Create a function that takes a number and return an array of three numbers: half of the number, quarter of the number and an eighth of the number.
 
@@ -200,9 +200,9 @@ function halfQuarterEighth(num) {
 }
 
 // Examples
-// console.log(halfQuarterEighth(6))//➞ [3, 1.5, 0.75]
-// console.log(halfQuarterEighth(22)) //➞ [11, 5.5, 2.75]
-// console.log(halfQuarterEighth(25)) //➞ [12.5, 6.25, 3.125]
+console.log(halfQuarterEighth(6))//➞ [3, 1.5, 0.75]
+console.log(halfQuarterEighth(22)) //➞ [11, 5.5, 2.75]
+console.log(halfQuarterEighth(25)) //➞ [12.5, 6.25, 3.125]
 
 //Q => 29 Create a function that takes a whole number as input and returns the shape with that number's amount of sides. Here are the expected outputs to get from these inputs.
 
@@ -223,9 +223,9 @@ function nSidedShape(n) {
     return shapes[n - 1]
 }
 // Examples
-// console.log(nSidedShape(3)) // ➞ "triangle"
-// console.log(nSidedShape(1)) // ➞ "circle"
-// console.log(nSidedShape(9)) // ➞ "nonagon"
+console.log(nSidedShape(3)) // ➞ "triangle"
+console.log(nSidedShape(1)) // ➞ "circle"
+console.log(nSidedShape(9)) // ➞ "nonagon"
 
 //Q => 30 Create a function that takes an array with numbers and return an array with the elements multiplied by two.
 
@@ -249,9 +249,9 @@ function getMultipliedArr(arr){
 }
 
 // // Examples
-// console.log(getMultipliedArr([2, 5, 3])) //➞ [4, 10, 6]
-// console.log(getMultipliedArr([1, 86, -5])) //➞ [2, 172, -10]
-// console.log(getMultipliedArr([5, 382, 0])) //➞ [10, 764, 0]
+console.log(getMultipliedArr([2, 5, 3])) //➞ [4, 10, 6]
+console.log(getMultipliedArr([1, 86, -5])) //➞ [2, 172, -10]
+console.log(getMultipliedArr([5, 382, 0])) //➞ [10, 764, 0]
 
 
 //Q=> 31 Create a function that takes an array of words and transforms it into an array of each word's length.

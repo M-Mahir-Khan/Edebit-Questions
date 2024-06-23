@@ -36,10 +36,7 @@ function cleanUpArray(arr){
 }
 
 // Examples
-// console.log(cleanUpArray(["8"]))// ➞ [[8], []]
-// console.log(cleanUpArray(["11"])) //➞ [[], [11]]
-// console.log(cleanUpArray(["7", "4", "8"]))// ➞ [[4, 8], [7]]
-// console.log(cleanUpArray(["9", "4", "5", "8"])) //➞ [[4, 8], [9, 5]]
+console.log(cleanUpArray(["8"]))// ➞ [s "8"])) //➞ [[4, 8], [9, 5]]
 
 // 53 Create a function that takes two arguments of an array of numbers arr and a constant number n and returns the n largest numbers from the given array.
 function largestNumbers(n,arr){
@@ -49,10 +46,10 @@ function largestNumbers(n,arr){
 }
 
 // Examples
-// console.log(largestNumbers(2, [4, 3, 2, 1]) )//➞ [3, 4]
-// console.log(largestNumbers(1, [7, 19, 4, 2]))// ➞ [19]
-// console.log(largestNumbers(3, [14, 12, 57, 11, 18, 16]))// ➞ [16, 18, 57]
-// console.log(largestNumbers(0, [1, 3, 4, 2]) )//➞ []
+console.log(largestNumbers(2, [4, 3, 2, 1]) )//➞ [3, 4]
+console.log(largestNumbers(1, [7, 19, 4, 2]))// ➞ [19]
+console.log(largestNumbers(3, [14, 12, 57, 11, 18, 16]))// ➞ [16, 18, 57]
+console.log(largestNumbers(0, [1, 3, 4, 2]) )//➞ []
 
 // 54 Create a function that finds each factor of a given number n. Your solution should return an array of the number(s) that meet this criteria.
 
@@ -71,9 +68,9 @@ function findFactors(n){
 // console.log(findFactors(9) )// ➞ [1, 3, 9]
 // 9 has three factors 1, 3 and 9
 
-// console.log(findFactors(12))// ➞ [1, 2, 3, 4, 6, 12]
-// console.log(findFactors(20))// ➞ [1, 2, 4, 5, 10, 20]
-// console.log(findFactors(0) )// ➞ []
+console.log(findFactors(12))// ➞ [1, 2, 3, 4, 6, 12]
+console.log(findFactors(20))// ➞ [1, 2, 4, 5, 10, 20]
+console.log(findFactors(0) )// ➞ []
 // 0 has no factors
 
 // 55 Given an array of numbers, remove the largest and smallest numbers, and calculate the average of the remaining numbers.
@@ -105,12 +102,12 @@ function trimmedAverages(arr){
     return average
 }
 // // Examples
-// console.log(trimmedAverages([4, 5, 7, 100]) )//➞ 6
-// // Average of 5 and 7
-// console.log(trimmedAverages([10, 25, 5, 15, 20])) //➞ 15
-// // Average of 10, 15 and 20
-// console.log(trimmedAverages([1, 1, 1]) )//➞ 1
-// // 1
+console.log(trimmedAverages([4, 5, 7, 100]) )//➞ 6
+// Average of 5 and 7
+console.log(trimmedAverages([10, 25, 5, 15, 20])) //➞ 15
+// Average of 10, 15 and 20
+console.log(trimmedAverages([1, 1, 1]) )//➞ 1
+// 1
 
 //56 Given an array of numbers, return true if the sum of the array is less than 100; otherwise return false.
 function arrayLessThan100(arr){
@@ -129,9 +126,9 @@ function arrayLessThan100(arr){
 }
 
 // Examples
-// console.log(arrayLessThan100([5, 57]) )//➞ true
-// console.log(arrayLessThan100([77, 30]))// ➞ false
-// console.log(arrayLessThan100([0])) // ➞ true
+console.log(arrayLessThan100([5, 57]) )//➞ true
+console.log(arrayLessThan100([77, 30]))// ➞ false
+console.log(arrayLessThan100([0])) // ➞ true
 
 // Create a function that takes a 2D array arr and returns the sum of the minimum value in each row.
 function sumMinimums(arr){

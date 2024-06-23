@@ -36,20 +36,20 @@ console.log(spaceMeOut("elongated musk")) // ➞ "e l o n g a t e d   m u s k"
 // let trans3 = arr[2][0]
 // let trans4 = arr[2][1][0]
 
-// console.log(trans1) // outputs "cars"
-// console.log(trans2) // outputs "planes"
-// console.log(trans3) // outputs "trains"
-// console.log(trans4) // outputs "motorcycles"
+console.log(trans1) // outputs "cars"
+console.log(trans2) // outputs "planes"
+console.log(trans3) // outputs "trains"
+console.log(trans4) // outputs "motorcycles"
 // With ES6, you can assign variables from arrays in a much more succinct way.
 
 const arr2 = ["cars", "planes", ["trains", ["motorcycles"]]];
 
 // Destructuring assignment
 const [trans1, trans2, [trans3, [trans4]]] = arr2;
-// console.log(trans1) // outputs "cars"
-// console.log(trans2) // outputs "planes"
-// console.log(trans3) // outputs "trains"
-// console.log(trans4) // outputs "motorcycles"
+console.log(trans1) // outputs "cars"
+console.log(trans2) // outputs "planes"
+console.log(trans3) // outputs "trains"
+console.log(trans4) // outputs "motorcycles"
 
 
 //Q=>35 Create a program that will take two arrays of integers, a and b. Each array will consist of 3 positive integers, representing the dimensions of cuboids a and b. Find the difference of the cuboids' volumes.
@@ -70,10 +70,10 @@ function findDifference(a,b){
 
 
 // Examples
-// console.log(findDifference([ 28, 16, 29 ], [ 7, 8, 17 ]) ) //➞ 12040
-// console.log(findDifference([ 9, 22, 18 ], [ 16, 24, 10 ])) // ➞ 276
-// console.log(findDifference([ 1, 9, 25 ], [ 10, 7, 9 ]) )//➞  405
-// console.log(findDifference([ 7, 6, 16 ], [ 26, 9, 26 ]))// ➞  5412
+console.log(findDifference([ 28, 16, 29 ], [ 7, 8, 17 ]) ) //➞ 12040
+console.log(findDifference([ 9, 22, 18 ], [ 16, 24, 10 ])) // ➞ 276
+console.log(findDifference([ 1, 9, 25 ], [ 10, 7, 9 ]) )//➞  405
+console.log(findDifference([ 7, 6, 16 ], [ 26, 9, 26 ]))// ➞  5412
 
 //Q=>36 Create a function that takes an array and returns the sum of all numbers in the array.
 
@@ -170,10 +170,10 @@ function rotateByOne(arr) {
     return arr
 }
 
-// Examples
-// console.log(rotateByOne([1, 2, 3, 4, 5]))   //➞ [5, 1, 2, 3, 4]
-// console.log(rotateByOne([6, 5, 8, 9, 7]) )  //➞ [7, 6, 5, 8, 9]
-// console.log(rotateByOne([20, 15, 26, 8, 4]))// ➞ [4, 20, 15, 26, 8]
+Examples
+console.log(rotateByOne([1, 2, 3, 4, 5]))   //➞ [5, 1, 2, 3, 4]
+console.log(rotateByOne([6, 5, 8, 9, 7]) )  //➞ [7, 6, 5, 8, 9]
+console.log(rotateByOne([20, 15, 26, 8, 4]))// ➞ [4, 20, 15, 26, 8]
 
 
 //Q=>40 Create a function that returns the selected filename from a path. Include the extension in your answer.
@@ -184,9 +184,9 @@ function getFilename(path) {
 }
 
 // // Examples
-// console.log(getFilename("C:/Projects/pil_tests/ascii/edabit.txt"))// ➞ "edabit.txt"
-// console.log(getFilename("C:/Users/johnsmith/Music/Beethoven_5.mp3"))// ➞ "Beethoven_5.mp3"
-// console.log(getFilename("ffprobe.exe"))// ➞ "ffprobe.exe"
+console.log(getFilename("C:/Projects/pil_tests/ascii/edabit.txt"))// ➞ "edabit.txt"
+console.log(getFilename("C:/Users/johnsmith/Music/Beethoven_5.mp3"))// ➞ "Beethoven_5.mp3"
+console.log(getFilename("ffprobe.exe"))// ➞ "ffprobe.exe"
 
 
 //Q => 41 Write a function that takes an array of drinks and returns an array of only drinks with no sugar in them. Drinks that contain sugar (in this challenge) are:

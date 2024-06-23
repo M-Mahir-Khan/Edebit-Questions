@@ -8,9 +8,9 @@ function getFirstValue(arr){
     return arr.shift()
 }
 // Examples
-// console.log(getFirstValue([1, 2, 3])) //➞ 1
-// console.log(getFirstValue([80, 5, 100]))// ➞ 80
-// console.log(getFirstValue([-500, 0, 50]))// ➞ -500
+console.log(getFirstValue([1, 2, 3])) //➞ 1
+console.log(getFirstValue([80, 5, 100]))// ➞ 80
+console.log(getFirstValue([-500, 0, 50]))// ➞ -500
 
 
 
@@ -30,9 +30,9 @@ function makePair(arg1,arg2){
 
 
 // Examples
-// console.log(makePair(1, 2)) //➞ [1, 2]
-// console.log(makePair(51, 21))// ➞ [51, 21]
-// console.log(makePair(512124, 215))// ➞ [512124, 215]
+console.log(makePair(1, 2)) //➞ [1, 2]
+console.log(makePair(51, 21))// ➞ [51, 21]
+console.log(makePair(512124, 215))// ➞ [512124, 215]
 
 // Q => 3 According to the lodash documentation, _.drop creates a slice of an array with n elements dropped from the beginning.
 // Your challenge is to write your own version using vanilla JavaScript.
@@ -52,9 +52,9 @@ function drop(arr, n) {
 }
 
 // Examples
-// console.log(drop([1, 2, 3], 1)) // ➞ [2, 3]
-// console.log(drop([1, 2, 3], 2)) // ➞ [3]
-// console.log(drop([1, 2, 3], 5))// ➞ []
+console.log(drop([1, 2, 3], 1)) // ➞ [2, 3]
+console.log(drop([1, 2, 3], 2)) // ➞ [3]
+console.log(drop([1, 2, 3], 5))// ➞ []
 
 // drop([1, 2, 3], 0) ➞ [1, 2, 3
 
@@ -85,9 +85,9 @@ function reverse(arr){
 }
 
 // Examples
-// console.log(reverse([1, 2, 3, 4])) // ➞ [4, 3, 2, 1]
-// console.log(reverse([9, 9, 2, 3, 4])) // ➞ [4, 3, 2, 9, 9]
-// console.log(reverse([])) //➞  []
+console.log(reverse([1, 2, 3, 4])) // ➞ [4, 3, 2, 1]
+console.log(reverse([9, 9, 2, 3, 4])) // ➞ [4, 3, 2, 9, 9]
+console.log(reverse([])) //➞  []
 
 // Q => 6 make a function that add 1 to every element in the array!
 
@@ -101,9 +101,9 @@ function incrementItems(arr) {
 }
 
 // Examples
-// console.log(incrementItems([0, 1, 2, 3]))// ➞ [1, 2, 3, 4]
-// console.log(incrementItems([2, 4, 6, 8]))// ➞ [3, 5, 7, 9]
-// console.log(incrementItems([-1, -2, -3, -4]))  //➞ [0, -1, -2, -3]
+console.log(incrementItems([0, 1, 2, 3]))// ➞ [1, 2, 3, 4]
+console.log(incrementItems([2, 4, 6, 8]))// ➞ [3, 5, 7, 9]
+console.log(incrementItems([-1, -2, -3, -4]))  //➞ [0, -1, -2, -3]
 
 
 
@@ -139,9 +139,9 @@ function getLastItem(arr){
 }
 
 // Examples
-// console.log(getLastItem([1, 2, 3])) // ➞ 3
-// console.log(getLastItem(["cat", "dog", "duck"]))// ➞ "duck"
-// console.log(getLastItem([true, false, true]))// ➞ true
+console.log(getLastItem([1, 2, 3])) // ➞ 3
+console.log(getLastItem(["cat", "dog", "duck"]))// ➞ "duck"
+console.log(getLastItem([true, false, true]))// ➞ true
 
 //Q => 9 Create a function that takes an array of numbers or letters and returns a string.
 
@@ -159,9 +159,9 @@ function arrayToString(arr){
 
 
 // Examples
-// console.log(arrayToString([1, 2, 3, 4, 5, 6])) //➞ "123456"
-// console.log(arrayToString(["a", "b", "c", "d", "e", "f"])) //➞ "abcdef"
-// console.log(arrayToString([1, 2, 3, "a", "s", "dAAAA"])) //➞ "123asdAAAA"
+console.log(arrayToString([1, 2, 3, 4, 5, 6])) //➞ "123456"
+console.log(arrayToString(["a", "b", "c", "d", "e", "f"])) //➞ "abcdef"
+console.log(arrayToString([1, 2, 3, "a", "s", "dAAAA"])) //➞ "123asdAAAA"
 
 // Q => 10 Create a function to concatenate two integer arrays.
 
@@ -182,9 +182,9 @@ function concat(arr1,arr2){
 }
 
 // Examples
-// console.log(concat([1, 3, 5], [2, 6, 8])) // ➞ [1, 3, 5, 2, 6, 8]
-// console.log(concat([7, 8], [10, 9, 1, 1, 2])) // ➞ [7, 8, 10, 9, 1, 1, 2]
-// console.log(concat([4, 5, 1], [3, 3, 3, 3, 3])) //➞ [4, 5, 1, 3, 3, 3, 3, 3]
+console.log(concat([1, 3, 5], [2, 6, 8])) // ➞ [1, 3, 5, 2, 6, 8]
+console.log(concat([7, 8], [10, 9, 1, 1, 2])) // ➞ [7, 8, 10, 9, 1, 1, 2]
+console.log(concat([4, 5, 1], [3, 3, 3, 3, 3])) //➞ [4, 5, 1, 3, 3, 3, 3, 3]
 
 
 // Q => 11Create a function that takes an array and a string as arguments and returns the index of the string.
@@ -202,10 +202,10 @@ function findIndex(arr, str) {
 }
 
 // Examples
-// console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")) // ➞ 2
-// console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) //➞ 1
-// console.log(findIndex(["a", "g", "y", "d"], "d")) //➞ 3
-// console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple"))// ➞ 0
+console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")) // ➞ 2
+console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) //➞ 1
+console.log(findIndex(["a", "g", "y", "d"], "d")) //➞ 3
+console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple"))// ➞ 0
 
 
 // Q => 12 Given an index and an array, return the value of the array with the given index.
@@ -223,9 +223,9 @@ function valueAt(arr,index){
 }
 
 // Examples
-// console.log(valueAt([1, 2, 3, 4, 5, 6], 10 / 2)) //➞ 6
-// console.log(valueAt([1, 2, 3, 4, 5, 6], 8.0 / 2)) //➞ 5
-// console.log(valueAt([1, 2, 3, 4], 6.535355314 / 2)) //➞ 4
+console.log(valueAt([1, 2, 3, 4, 5, 6], 10 / 2)) //➞ 6
+console.log(valueAt([1, 2, 3, 4, 5, 6], 8.0 / 2)) //➞ 5
+console.log(valueAt([1, 2, 3, 4], 6.535355314 / 2)) //➞ 4
 
 // Q => 13 Create a function that finds the index of a given item.
 
@@ -272,9 +272,9 @@ function sumArray(arr){
     return eval(res)
 }
 
-// console.log(sumArray([1, 2, 3, 4, 5]))// ➞ 15
-// console.log(sumArray([-1, 0, 1])) //➞ 0
-// console.log(sumArray([0, 4, 8, 12])) //➞ 24
+console.log(sumArray([1, 2, 3, 4, 5]))// ➞ 15
+console.log(sumArray([-1, 0, 1])) //➞ 0
+console.log(sumArray([0, 4, 8, 12])) //➞ 24
 
 
 // Q => 15 Create a function that searches for the index of a given item in an array. If the item is present, it should return the index, otherwise, it should return -1.

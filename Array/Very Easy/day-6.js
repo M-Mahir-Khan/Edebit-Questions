@@ -255,7 +255,7 @@ console.log(averageIndex(["a", "b", "c", "i"]) ) //➞ 3.75
 console.log(averageIndex(["e", "d", "a", "b", "i", "t"]) ) //➞ 6.83
 console.log(averageIndex(["y", "o", "u", "a", "r", "e", "t", "h", "e", "b", "e", "s", "t"]) ) //➞ 12.62
 
-// Write a function that takes an array of strings and a pattern (string) and returns the strings that contain the pattern in alphabetical order. If the pattern is an empty string, return all the strings passed in the input array.
+// 69 Write a function that takes an array of strings and a pattern (string) and returns the strings that contain the pattern in alphabetical order. If the pattern is an empty string, return all the strings passed in the input array.
 
 function cmsSelector(arr,str){
     let res = []
@@ -278,7 +278,7 @@ console.log(cmsSelector(["WordPress", "Joomla", "Drupal", "Magento"], "ru") ) //
 console.log(cmsSelector(["WordPress", "Joomla", "Drupal", "Magento"], "") ) //➞ ["Drupal", "Joomla", "Magento", "WordPress"]
 
 
-// Create a function that takes a number (from 1 to 12) and returns its corresponding month name as a string. For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
+// 70 Create a function that takes a number (from 1 to 12) and returns its corresponding month name as a string. For example, if you're given 3 as input, your function should return "March", because March is the 3rd month.
 
 // Number	Month Name
 // 1	January
@@ -338,7 +338,7 @@ console.log(monthName(3) ) //➞ "March"
 console.log(monthName(12)) // ➞ "December"
 console.log(monthName(6) ) //➞ "June"
 
-// Wild Roger is tasked with shooting down 6 bottles with 6 shots as fast as possible. Here are the different types of shots he could make:
+// 71 Wild Roger is tasked with shooting down 6 bottles with 6 shots as fast as possible. Here are the different types of shots he could make:
 
 // He could use one pistol to shoot a bottle with a "Bang!" in 0.5 seconds.
 // Or he could use both pistols at once with a "BangBang!" to shoot two bottles in 0.5 seconds.
@@ -369,7 +369,7 @@ console.log(rogerShots(["Bang!", "Bang!", "Bang!", "Bang!", "Bang!", "Bang!"]) )
 console.log(rogerShots(["Bang!", "Bang!", "Bang!", "Bang!", "BangBang!"]) ) //➞ 2.5
 console.log(rogerShots(["Bang!", "BangBangBang!", "Boom!", "Bang!", "BangBang!", "BangBang!"])) // ➞ 2
 
-// Create a function that takes a string str and returns an array of two-paired characters. If the string has an odd number of characters, add an asterisk * in the final pair.
+//72  Create a function that takes a string str and returns an array of two-paired characters. If the string has an odd number of characters, add an asterisk * in the final pair.
 
 // See the below examples for a better understanding:
 
