@@ -187,6 +187,7 @@ function length(str){
 
 
 
+
 // Examples
 // console.log(length("Hello World")) //➞ 11
 // console.log(length("Edabit")) //➞ 6

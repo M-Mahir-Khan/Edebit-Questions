@@ -182,7 +182,7 @@ console.log(lastItem("The quick brown fox jumped over the lazy dog")) // ➞ "g"
 console.log(lastItem([])) // ➞ undefined
 
 
-// Create a function that determines the age difference between spouses in a household. The ages ages in years of the parents and their children are given in an array.
+//58 Create a function that determines the age difference between spouses in a household. The ages ages in years of the parents and their children are given in an array.
 
 // If there is no difference in age between the parents, return "No age difference between spouses.". Otherwise, return the difference in years. Check the examples for more clarification.
 
@@ -200,7 +200,7 @@ console.log(ageDifference([29, 1, 6, 8, 28])) // ➞ "1 year"
 console.log(ageDifference([43, 86, 49, 86]) ) //➞ "No age difference between spouses."
 console.log(ageDifference([2, 4, 6, 32, 27])) // ➞ "5 years"
 
-// Given an array of either entirely odd integers or entirely even integers except for a single Outlier Number, create a function to return this number.
+// 59 Given an array of either entirely odd integers or entirely even integers except for a single Outlier Number, create a function to return this number.
 
 function outlierNumber(arr) {
     if (arr.length >= 3) {
