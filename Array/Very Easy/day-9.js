@@ -127,7 +127,7 @@ console.log(repeat(13, 5)) //  ➞ [13, 13, 13, 13, 13]
 console.log(repeat("7", 2)) //  ➞ ["7", "7"]
 console.log(repeat(0, 0)) //  ➞ []
 
-// Write a function that takes an array of elements and returns only the integers.
+//106 Write a function that takes an array of elements and returns only the integers.
 
 function returnOnlyInteger(arr){
     let res = arr.filter(item => typeof item === "number" && Number.isInteger(item))
