@@ -18,7 +18,7 @@ function cleanUpArray(arr) {
 }
 
 function cleanUpArray(arr){
-    let newarr = [[],[]]
+    let newarr = [[],[]];
     for(let i= 0; i< arr.length ; i++){
         if(arr[i] % 2 === 0){
             newarr[0].push(arr[i])

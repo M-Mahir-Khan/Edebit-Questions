@@ -457,6 +457,8 @@ function same(arr1, arr2) {
 
 //124 Write a function that finds the sum of an array. Make your function recursive.
 
+
+
 function sum(arr) {
     if (arr.length === 0) {
         return 0
@@ -470,3 +472,4 @@ console.log(sum([1, 2, 3, 4])) // ➞ 10
 console.log(sum([1, 2])) // ➞ 3
 console.log(sum([1])) // ➞ 1
 console.log(sum([])) // ➞ 0
+
