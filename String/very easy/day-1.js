@@ -4,6 +4,10 @@ function giveMeSomething(a){
     return "something " + a
 }
 
+function giveMeSomething(a){
+    let res =  `something ${a}`
+}
+
 // Examples
 // console.log(giveMeSomething("is better than nothing")) // ➞ "something is better than nothing"
 // console.log(giveMeSomething("Bob Jane"))  //➞ "something Bob Jane"
@@ -16,6 +20,14 @@ function nameString(name){
     return result
 }
 
+function nameString(name){
+    return name.concat("Edabit")
+}
+
+function nameString(name){
+    return `${name}Edabit`
+}
+
 // Examples
 // console.log(nameString("Mubashir")) // ➞ "MubashirEdabit"
 // console.log(nameString("Matt")) // ➞ "MattEdabit"
@@ -25,6 +37,18 @@ function nameString(name){
 
 function boolToString(flag){
     return flag.toString()
+}
+
+function boolToString(flag){
+    return flag + ""
+}
+
+function boolToString(flag){
+    return String(flag)
+}
+
+function boolToString(flag){
+    return `${flag}`
 }
 
 // Examples
@@ -48,7 +72,11 @@ function calculator(str){
 // Can you help her?
 
 function greeting(name){
-    return "Hello, " + name;
+    if(name === "Mubashir"){
+        return "Hello, my love!"
+    }
+
+    return `Hello, ${name}`
 }
 
 // Examples
@@ -67,7 +95,7 @@ function comp(str1, str2){
 // console.log(comp("ABC", "DE")) // ➞ false
 // console.log(comp("hello", "edabit")) //➞ false
 
-// Q => 7Create a function that returns true if a string is empty and false otherwise.
+// Q => 7 Create a function that returns true if a string is empty and false otherwise.
 function isEmpty(str){
     return str.length === 0
 }
@@ -82,6 +110,14 @@ function length(str){
     return str.length
 }
 
+function length(str){
+    let length = 0;
+    for(let i = 0; i < str.length; i++){
+        length++
+    }
+    return length
+}
+
 // Examples
 console.log(length("apple"))// ➞ 5
 console.log(length("make"))// ➞ 4
@@ -91,8 +127,13 @@ console.log(length("") ) //➞ 0
 
 // Q => 9 Given two strings, firstName and lastName, return a single string in the format "last, first".
 function concatName(firstName,lastName){
-    return lastName + firstName
+    return lastName + "," +firstName
 }
+
+function concatName(firstName,lastName){
+    return `${firstName}, ${lastName}`
+}
+
 // Examples
 console.log(concatName("First", "Last") )// ➞ "Last, First"
 console.log(concatName("John", "Doe") ) //➞ "Doe, John"
@@ -104,12 +145,34 @@ function stringInt(str){
     return parseInt(str)
 }
 
+function stringInt(str){
+    return +str
+}
+
 // Examples
 console.log(stringInt("6")) //s ➞ 6
 console.log(stringInt("1000")) //s ➞ 1000
 console.log(stringInt("12") ) //s➞ 12
 
-// Q => 11 Create a function that evaluates an equation.
+
+
+// Q => 11 Write a function that returns the length of a string. Make your function recursive.
+
+function length(str){
+    if(str.length === 0){
+        return 0
+    }
+    return 1 + length(str.slice(1))
+}
+
+// Examples
+console.log(length("apple")) // ➞ 5
+console.log(length("make")) // ➞ 4
+console.log(length("a")) // ➞ 1
+console.log(length("")) // ➞ 0
+
+
+// Q => 12 Create a function that evaluates an equation.
 
 function eq(equation){
     return eval(equation)
@@ -120,7 +183,7 @@ function eq(equation){
 // console.log(eq("6/(9-7)"))// ➞ 3
 // console.log(eq("3+2-4"))// ➞ 1
 
-// Write a template string according to the following example:
+// Q => 13 Write a template string according to the following example:
 
 // Example
 const a = "John";
@@ -129,7 +192,7 @@ const c = "Jack";
 const template = `Their names were: ${a}, ${b} and ${c}`// ➞ "Their names were:  John,  Joe  and  Jack."
 
 
-// Q => 13 Given a string, return true if its length is even or false if the length is odd.
+// Q => 14 Given a string, return true if its length is even or false if the length is odd.
 
 function oddOrEven(str){
     const strLenght = str.length
@@ -146,3 +209,107 @@ console.log(oddOrEven("pears")) //➞ false
 // Therefore the program outputs false.
 
 console.log(oddOrEven("cherry")) //➞ true
+
+//Q => 15 You need to create two functions to substitute toString() and parseInt(); A function called intToString() that converts integers into strings and a function called stringToInt() that converts strings into integers.
+
+function intToString(num){
+    return String(num)
+}
+
+function stringToInt(num){
+    return parseInt(num)
+
+}
+
+// Examples:
+console.log(intToString(4)) // ➞ "4"
+console.log(stringToInt("4")) // ➞ 4
+console.log(intToString(29348)) // ➞ "29348"
+
+//Q => 16 Create a function that takes a word and returns the new word without including the first character.
+
+function newWord(str){
+    return str.slice(1)
+}
+
+function newWord(str){
+    let res = "";
+    for(let i = 1 ; i < str.length; i++)[
+        res += str[i]
+    ]
+    return res
+}
+
+// Examples
+console.log(newWord("apple")) // ➞ "pple"
+console.log(newWord("cherry")) // ➞ "herry"
+console.log(newWord("plum")) // ➞ "lum"
+
+//Q => 17 Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.
+
+function helloName(str){
+    return `Hello ${str}!`
+}
+
+function helloName(str){
+    return "Hello" + str + "!"
+}
+
+function helloName(str){
+    return "Hello".concat(`${str}!`)
+}
+
+// Examples
+console.log(helloName("Gerald")) // ➞ "Hello Gerald!"
+console.log(helloName("Tiffany")) // ➞ "Hello Tiffany!"
+console.log(helloName("Ed")) // ➞ "Hello Ed!"
+
+
+
+//Q => 18 Create a function that takes an array of numbers or letters and returns a string.
+
+function arrayToString(arr){
+    let res = "";
+    for(let i = 0; i < arr.length; i++){
+        res += arr[i]
+    }
+    return res
+}
+
+function arrayToString(arr){
+    return arr.join("")
+}
+
+function arrayToString(arr){
+    let res = "";
+    arr.map(item => {
+        res += item
+    })
+    return res
+}
+
+// Examples
+console.log(arrayToString([1, 2, 3, 4, 5, 6])) // ➞ "123456"
+console.log(arrayToString(["a", "b", "c", "d", "e", "f"])) // ➞ "abcdef"
+console.log(arrayToString([1, 2, 3, "a", "s", "dAAAA"])) // ➞ "123asdAAAA"
+
+
+// Create a function that takes an array and a string as arguments and returns the index of the string.
+
+function findIndex(arr,str){
+    return arr.indexOf(str)
+}
+
+function findIndex(arr,str){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === str){
+            return i
+        }
+    }
+}
+
+// Examples
+console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")) // ➞ 2
+console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) // ➞ 1
+console.log(findIndex(["a", "g", "y", "d"], "d")) // ➞ 3
+console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple")) // ➞ 0
