@@ -294,7 +294,7 @@ console.log(arrayToString(["a", "b", "c", "d", "e", "f"])) // ➞ "abcdef"
 console.log(arrayToString([1, 2, 3, "a", "s", "dAAAA"])) // ➞ "123asdAAAA"
 
 
-// Create a function that takes an array and a string as arguments and returns the index of the string.
+//Q => 19 Create a function that takes an array and a string as arguments and returns the index of the string.
 
 function findIndex(arr,str){
     return arr.indexOf(str)
@@ -313,3 +313,54 @@ console.log(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")) // ➞ 2
 console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) // ➞ 1
 console.log(findIndex(["a", "g", "y", "d"], "d")) // ➞ 3
 console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple")) // ➞ 0
+
+// Create a function that returns a number, based on the string provided. Here is a list of all digits:
+
+// String	Number
+// "one"	1
+// "two"	2
+// "three"	3
+// "four"	4
+// "five"	5
+// "six"	6
+// "seven"	7
+// "eight"	8
+// "nine"	9
+// "zero"	0
+
+function word(str) {
+    let obj = {
+        "one": 1,
+        "two": 2,
+        "three": 3,
+        "four": 4,
+        "five": 5,
+        "six": 6,
+        "seven": 7,
+        "eight": 8,
+        "nine": 9,
+        "ten": 10
+    }
+    return obj[str]
+}
+
+function word(str){
+    switch (str){
+        case "one": return 1
+        case "two": return 2
+        case "three": return 3
+        case "four": return 4
+        case "five": return 5
+        case "six": return 6
+        case "seven": return 7
+        case "eight": return 8
+        case "nine": return 9
+        case "ten": return 10
+        default: throw new Error("invalid input number")
+    }
+}
+
+// Examples
+console.log(word("one")) // ➞ 1
+console.log(word("two")) // ➞ 2
+console.log(word("nine")) // ➞ 9
