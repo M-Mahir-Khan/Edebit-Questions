@@ -303,3 +303,68 @@ function intOrString(arg){
 console.log(intOrString(8)) // ➞ "int"
 console.log(intOrString("Hello")) // ➞ "str"
 console.log(intOrString(9843532)) // ➞ "int"
+
+//Q => 38 Write a function that takes an integer and:
+
+// If the number is a multiple of 3, return "Hello".
+// If the number is a multiple of 5, return "World".
+// If the number is a multiple of both 3 and 5, return "Hello World".
+
+function helloWorld(num){
+    if(num % 3 === 0 && num % 5 === 0){
+        return "Hello World"
+    }else if(num % 5 === 0){
+        return "World"
+    }else if(num % 3 === 0){
+        return "Hello"
+    }
+}
+
+// Examples
+console.log(helloWorld(3)) // ➞ "Hello"
+console.log(helloWorld(5)) // ➞ "World"
+console.log(helloWorld(15)) // ➞ "Hello World"
+
+
+//Q => 39 Write two functions:
+
+// toInt() : A function to convert a string to an integer.
+// toStr() : A function to convert an integer to a string.
+
+function toInt(str){
+    return parseInt(str)
+}
+
+function toStr(int){
+    return int.toString()
+}
+
+// Examples
+console.log(toInt("77")) // ➞ 77
+console.log(toInt("532")) // ➞ 532
+console.log(toStr(77)) // ➞ "77"
+console.log(toStr(532)) // ➞ "532"
+
+
+//! => 40 Create a function that returns the string "Burp" with the amount of "r's" determined by the input parameters of the function.
+// Notes
+// Expect num to always be >= 1.
+// Remember to use a capital "B".
+// Don't forget to return the result.
+
+function longBurp(num){
+    let burp = "Bu"
+    for(let i = 0; i < num; i++){
+        burp += "r"
+    }
+    return burp + "p"
+}
+
+function longBurp(num){
+    return "Bu" + "r".repeat(num) + "p"
+}
+
+// Examples
+console.log(longBurp(3)) // ➞ "Burrrp"
+console.log(longBurp(5)) // ➞ "Burrrrrp"
+console.log(longBurp(9)) // ➞ "Burrrrrrrrrp"
