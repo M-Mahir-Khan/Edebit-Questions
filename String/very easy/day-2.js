@@ -346,7 +346,7 @@ console.log(toStr(77)) // ➞ "77"
 console.log(toStr(532)) // ➞ "532"
 
 
-//! => 40 Create a function that returns the string "Burp" with the amount of "r's" determined by the input parameters of the function.
+//Q => 40 Create a function that returns the string "Burp" with the amount of "r's" determined by the input parameters of the function.
 // Notes
 // Expect num to always be >= 1.
 // Remember to use a capital "B".
@@ -368,3 +368,124 @@ function longBurp(num){
 console.log(longBurp(3)) // ➞ "Burrrp"
 console.log(longBurp(5)) // ➞ "Burrrrrp"
 console.log(longBurp(9)) // ➞ "Burrrrrrrrrp"
+
+
+//Q => 41 Create a function that takes a string and returns a string with spaces in between all of the characters.
+
+function spaceMeOut(str){
+    let arr = str.split("")
+    let result = ""
+    for(let i = 0; i < arr.length; i++){
+        result += arr[i] + " "
+    }
+    return result
+}
+
+function spaceMeOut(str){
+    return str.split("").join(" ")
+}
+
+
+// Examples
+console.log(spaceMeOut("space")) // ➞ "s p a c e"
+console.log(spaceMeOut("far out")) // ➞ "f a r   o u t"
+console.log(spaceMeOut("elongated musk")) // ➞ "e l o n g a t e d   m u s k"
+
+
+
+//q => 42 Create a function which makes the last character of a string repeat n number of times.
+
+function modifyLast(str,n){
+    let res = str + str[str.length -1].repeat(n-1)
+    return res
+}
+
+function modifyLast(str,n){
+    let last = str[str.length - 1];
+    for(let i = 1; i < n; i++){
+        str += last
+    }
+    return str
+}
+
+// Examples
+console.log(modifyLast("Hello", 3)) // ➞ "Hellooo"
+console.log(modifyLast("hey", 6)) // ➞ "heyyyyyy"
+console.log(modifyLast("excuse me what?", 5)) // ➞ "excuse me what?????"
+
+
+//Q => 43 Create a function that takes a string and changes the word amazing to not amazing. Return the string without any change if the word edabit is part of the string.
+
+function amazingEdabit(str){
+    if(str.includes("edabit")){
+        return str
+    }
+
+    return str.replace("amazing","not amazing")
+}
+
+// Examples
+console.log(amazingEdabit("edabit is amazing.")) // ➞ "edabit is amazing."
+console.log(amazingEdabit("Mubashir is amazing.")) // ➞ "Mubashir is not amazing."
+console.log(amazingEdabit("Infinity is amazing.")) // ➞ "Infinity is not amazing."
+
+//Q => 44 Create a class that takes the following four arguments for a particular football player:
+
+// name
+// age
+// height
+// weight
+// Also, create three functions for the class that returns the following strings:
+
+// getAge() returns "name is age age"
+// getHeight() returns "name is heightcm"
+// getWeight() returns "name weighs weightkg"
+
+class Player {
+    constructor(name,age,height,weight){
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+    }
+
+    getAge(){
+        console.log(`${this.name} is age ${this.age}`);
+    }
+
+    getHeight(){
+        console.log(`${this.name} is ${this.height}cm`);
+    }
+
+    getWeight(){
+        console.log(`${this.name} weighs ${this.weight}kg`);
+    }
+}
+
+
+// Examples
+ p1 = new Player("David Jones", 25, 175, 75)
+
+ p1.getAge()// ➞ "David Jones is age 25"
+ p1.getHeight()// ➞ "David Jones is 175cm"
+ p1.getWeight()// ➞ "David Jones weighs 75kg"
+
+
+// Q =>45 After an amazing performance, the crowd goes wild! People clap enthusiastically and most claps overlap with each other to create one homogeneous sound.
+
+// An overlapped clap is a clap which starts but doesn't finish, as in "ClaClap" (The first clap is cut short and there are overall 2 claps)
+
+// Given a string of what the overlapping claps sounded like, return how many claps were made in total.
+
+function countClaps(str){
+    let res = 0;
+    for(let i = 0; i < str.length; i++){
+        str[i] == "C" ? res +=1 : i
+    }
+    return res
+}
+
+// Examples
+console.log(countClaps("ClaClaClaClap!")) // ➞ 4
+console.log(countClaps("ClClClaClaClaClap!")) // ➞ 6
+console.log(countClaps("CCClaClClap!Clap!ClClClap!")) // ➞ 9
