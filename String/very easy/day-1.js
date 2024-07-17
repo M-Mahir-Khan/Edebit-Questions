@@ -314,7 +314,7 @@ console.log(findIndex(["Red", "blue", "Blue", "Green"], "blue")) // ➞ 1
 console.log(findIndex(["a", "g", "y", "d"], "d")) // ➞ 3
 console.log(findIndex(["Pineapple", "Orange", "Grape", "Apple"], "Pineapple")) // ➞ 0
 
-// Create a function that returns a number, based on the string provided. Here is a list of all digits:
+//Q => 20 Create a function that returns a number, based on the string provided. Here is a list of all digits:
 
 // String	Number
 // "one"	1
