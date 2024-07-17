@@ -354,3 +354,4 @@ function forbiddenLetter(letter, arr) {
 console.log(forbiddenLetter("r", ["rock", "paper", "scissors"])) // ➞ false
 console.log(forbiddenLetter("a", ["spoon", "fork", "knife"])) // ➞ true
 console.log(forbiddenLetter("m", [])) // ➞ true
+
