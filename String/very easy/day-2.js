@@ -372,6 +372,7 @@ console.log(longBurp(9)) // ➞ "Burrrrrrrrrp"
 
 //Q => 41 Create a function that takes a string and returns a string with spaces in between all of the characters.
 
+
 function spaceMeOut(str){
     let arr = str.split("")
     let result = ""
@@ -489,3 +490,4 @@ function countClaps(str){
 console.log(countClaps("ClaClaClaClap!")) // ➞ 4
 console.log(countClaps("ClClClaClaClaClap!")) // ➞ 6
 console.log(countClaps("CCClaClClap!Clap!ClClClap!")) // ➞ 9
+
