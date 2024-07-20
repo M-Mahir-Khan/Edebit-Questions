@@ -354,3 +354,57 @@ function replaceVowels(str, char) {
 console.log(replaceVowels("the aardvark", "#")) // ➞ "th# ##rdv#rk"
 console.log(replaceVowels("minnie mouse", "?")) // ➞ "m?nn?? m??s?"
 console.log(replaceVowels("shakespeare", "*") ) //➞ "sh*k*sp**r*"
+
+
+//Q => 89 Create a function that adds a string ending to each member in an array.
+
+function addEnding(arr,end){
+    let res = arr.map(item => item + end)
+    return res
+}
+
+function addEnding(arr,end){
+    let res = [];
+    for(let i =0 ; i < arr.length; i++){
+        res.push(arr[i] + end);
+    }
+    return res
+}
+
+function addEnding(arr,end){
+    let res = [];
+    arr.forEach(item => res.push(item + end))
+    return res
+}
+
+// Examples
+console.log(addEnding(["clever", "meek", "hurried", "nice"], "ly")
+) //➞ ["cleverly", "meekly", "hurriedly", "nicely"]
+
+console.log(addEnding(["new", "pander", "scoop"], "er")
+) //➞ ["newer", "panderer", "scooper"]
+
+console.log(addEnding(["bend", "sharpen", "mean"], "ing")
+) //➞ ["bending", "sharpening", "meaning"]
+
+
+//Q => 90 Create a function that takes an array of strings and returns the words that are exactly four letters.
+
+function isFourLetters(arr){
+    return arr.filter(item => item.length === 4)
+}
+
+function isFourLetters(arr){
+    let res = [];
+    for(let item of arr){
+        if(item.length === 4){
+            res.push(item)
+        }
+    }
+    return res
+}
+
+// Examples
+console.log(isFourLetters(["Tomato", "Potato", "Pair"])) // ➞ ["Pair"]
+console.log(isFourLetters(["Kangaroo", "Bear", "Fox"])) // ➞ ["Bear"]
+console.log(isFourLetters(["Ryan", "Kieran", "Jason", "Matt"])) // ➞ ["Ryan", "Matt"]
