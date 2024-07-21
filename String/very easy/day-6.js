@@ -566,7 +566,49 @@ function greetPeople(arr){
     return res.join(",")
 }
 
+function greetPeople(arr){
+    let res = [];
+    for(let item of arr){
+        res.push("Hello " + item)
+    } 
+    return res.join(", ")
+}
+
+
 // Examples
 console.log(greetPeople(["Joe"])) // ➞ "Hello Joe"
 console.log(greetPeople(["Angela", "Joe"])) // ➞ "Hello Angela, Hello Joe"
 console.log(greetPeople(["Frank", "Angela", "Joe"])) // ➞ "Hello Frank, Hello Angela, Hello Joe"
+
+
+// Write a function that returns the lexicographically first and lexicographically last rearrangements of a lowercase string. Output the results in the following manner:
+
+// firstAndLast(string) ➞ [first, last]
+// Notes
+// Lexicographically first: the permutation of the string that would appear first in the English dictionary (if the word existed).
+// Lexicographically last: the permutation of the string that would appear last in the English dictionary (if the word existed).
+
+function firstAndLast(str){
+    let res = str.split("").sort();
+
+    return [res.join("") , res.reverse().join("")]
+}
+
+// Examples
+console.log(firstAndLast("marmite")) // ➞ ["aeimmrt", "trmmiea"]
+console.log(firstAndLast("bench")) // ➞ ["bcehn", "nhecb"]
+console.log(firstAndLast("scoop")) // ➞ ["coops", "spooc"]
+
+
+// A word has been split into a left part and a right part. Re-form the word by adding both halves together, changing the first character to an uppercase letter.
+
+function getWord(str1,str2){
+    let res = str1 + str2;
+    let first =  res[0].toUpperCase()
+    return first + res.slice(1)
+}
+
+// Examples
+console.log(getWord("seas", "onal")) // ➞ "Seasonal"
+console.log(getWord("comp", "lete")) // ➞ "Complete"
+console.log(getWord("lang", "uage")) // ➞ "Language"
