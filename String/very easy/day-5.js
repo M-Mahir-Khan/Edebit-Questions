@@ -213,6 +213,14 @@ function hammingDistance(str1,str2){
     },0)
 }
 
+function hammingDistance(str1,str2){
+    let count = 0;
+     str1.split("").map((char,index)=>{
+         count += (char !== str2[index] ? 1 : 0)
+    })
+    return count;
+}
+
 // Examples
 console.log(hammingDistance("abcde", "bcdef")) // ➞ 5
 console.log(hammingDistance("abcde", "abcde")) // ➞ 0
@@ -230,10 +238,10 @@ const str = "**^&$Regular#$%Expressions$%$$%^**";
 const hiddenWord = str.replace(/[^\w]/g, '');
 console.log(hiddenWord);
 
-//Q => 83 Write the regular expression that reveals the hidden word. You have to remove all of the special characters to reveal the word. Use the character class \w in your expression.
+//Write the regular expression that reveals the hidden word. You have to remove all of the special characters to reveal the word. Use the character class \w in your expression.
 
 
-// Create a function that removes the first and last characters from a string.
+// Q => 83 Create a function that removes the first and last characters from a string.
 // Notes
 // If the string is 2 or fewer characters long, return the string itself (See Example #4).
 
