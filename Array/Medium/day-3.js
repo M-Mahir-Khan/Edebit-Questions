@@ -192,3 +192,129 @@ console.log(multiply([1, 2, 3])(0)) // ➞ [0, 0, 0]
   // Notes
   // Graphs may have between 0 and 25,000 nodes.
   // Time Limit: 100 milliseconds.
+
+//   Arrays can be mixed with various types. Your task for this challenge is to sum all the number elements in the given array. Create a function that takes an array and returns the sum of all numbers in the array.
+
+function numbersSum(arr){
+    let res = arr.filter(item => typeof item === "number").reduce((acc,curr)=> acc + curr,0)
+    return res
+}
+
+function numbersSum(arr){
+    let sum = 0;
+    for(let i = 0 ; i < arr.length; i++){
+        if(typeof arr[i] === "number"){
+            sum += arr[i]
+        }
+    }
+    return sum
+}
+
+function numbersSum(arr){
+    let sum = 0;
+    arr.forEach(item => {
+        typeof item === "number" ? sum += item : sum +=0
+    })
+    return sum
+}
+
+// Examples
+console.log(numbersSum([1, 2, "13", "4", "645"])) // ➞ 3
+console.log(numbersSum([true, false, "123", "75"])) // ➞ 0
+console.log(numbersSum([1, 2, 3, 4, 5, true])) // ➞ 15
+
+
+// Create the function that takes an array with objects and returns the sum of people's budgets.
+
+function getBudgets(arr){
+    let sum = 0;
+    for(let obj of arr){
+        sum += obj.budget
+    }
+    return sum
+}
+
+function getBudgets(arr){
+    let res = arr.reduce((acc,curr)=> acc + curr.budget,0)
+    return res
+}
+
+// Examples
+console.log(getBudgets([
+  { name: "John", age: 21, budget: 23000 },
+  { name: "Steve",  age: 32, budget: 40000 },
+  { name: "Martin",  age: 16, budget: 2700 }
+])) // ➞ 65700
+
+console.log(getBudgets([
+  { name: "John",  age: 21, budget: 29000 },
+  { name: "Steve",  age: 32, budget: 32000 },
+  { name: "Martin",  age: 16, budget: 1600 }
+])) // ➞ 62600
+
+
+// Create a function that takes an array of items and checks if the last item matches the rest of the array concatenated together.
+
+function matchLastItem(arr){
+    let res = ""
+    for(let i = 0 ; i < arr.length -1 ; i++){
+        res += arr[i]
+    }
+    return res === arr[arr.length -1]
+}
+
+function matchLastItem(arr){
+    let res = arr.slice(0,-1).reduce((acc,curr)=>acc + curr,"")
+    return res === arr[arr.length -1]
+}
+
+// Examples
+console.log(matchLastItem(["rsq", "6hi", "g", "rsq6hig"])) //  ➞ true
+// The last item is the rest joined.
+
+console.log(matchLastItem([1, 1, 1, "11"])) //  ➞ false
+// The last item should be "111".
+
+console.log(matchLastItem([8, "thunder", true, "8thundertrue"])) //  ➞ true
+
+// You just returned home to find your mansion has been robbed! Given an object of the stolen items, return the total amount of the burglary (number). If nothing was robbed, return the string "Lucky you!".
+
+function stolenItems(obj) {
+	let flated = Object.entries(obj).flat();
+    return  flated.reduce((acc,curr)=> {
+        if(typeof curr === "number"){
+            acc += curr
+        }
+        return acc
+    },0)
+    
+}
+
+function stolenItems(obj){
+	// let flated = Object.entries(obj).flat();
+    let sum = 0;
+    for(let key in obj){
+        sum += obj[key]
+    }
+    if(sum === 0){
+        return "Luckey you!"
+    }
+    return sum
+}
+
+// Examples
+console.log(
+    stolenItems({
+      tv: 30,
+      skate: 20,
+      stereo: 50,
+    })
+  ); //➞ 100
+  
+  console.log(
+    stolenItems({
+      painting: 20000,
+    })
+  ); //➞ 20000
+  
+  console.log(stolenItems({})); //➞ "Lucky you!"
