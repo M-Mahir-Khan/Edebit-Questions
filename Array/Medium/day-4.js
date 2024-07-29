@@ -290,9 +290,9 @@ function warOfNumbers(arr) {
     let odd = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0){
+        if (arr[i] % 2 === 0) {
             even += arr[i]
-        }else {
+        } else {
             odd += arr[i]
         }
     }
@@ -308,3 +308,189 @@ console.log(warOfNumbers([2, 8, 7, 5])) // ➞ 2
 
 console.log(warOfNumbers([12, 90, 75])) // ➞ 27
 console.log(warOfNumbers([5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243])) // ➞ 168
+
+
+
+//Q => 41 Return the total number of arrays inside a given array.
+
+function numOfSubbarrays(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        count++
+    }
+    return count
+}
+
+function numOfSubbarrays(arr) {
+    return arr.length
+}
+// Examples
+console.log(numOfSubbarrays([[1, 2, 3]])) // ➞ 1
+console.log(numOfSubbarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3]])) // ➞ 3
+console.log(numOfSubbarrays([[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]])) // ➞ 4
+console.log(numOfSubbarrays([1, 2, 3])) // ➞ 0
+
+
+//Q => 42 Create a function to find NaN in an array of numbers. The return value should be the index where NaN is found. If NaN is not found in the array, then return -1.
+
+function findNaN(arr) {
+    let res = arr.findIndex(Number.isNaN)
+    return res
+
+}
+
+function findNaN(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (Number.isNaN(arr[i])) {
+            return i
+        }
+    }
+    return -1
+}
+
+// Examples
+console.log(findNaN([1, 2, NaN])) // ➞ 2
+console.log(findNaN([NaN, 1, 2, 3, 4])) // ➞ 0
+console.log(findNaN([0, 1, 2, 3, 4])) // ➞ -1
+
+
+//Q => 43 Given an array of women and an array of men, either:
+
+// Return "sizes don't match" if the two arrays have different sizes.
+// If the sizes match, return an array of pairs, with the first woman paired with the first man, second woman paired with the second man, etc.
+
+function zipIt(women, men) {
+    if (women.length !== men.length) {
+        return "sizes don't match"
+    }
+
+    let res = women.map((item, index) => [item, men[index]])
+    return res
+
+}
+
+function zipIt(women, men) {
+    if (women.length !== men.length) {
+        return "sizes don't match"
+    }
+
+    let res = [];
+    for (let i = 0; i < women.length; i++) {
+        res.push([women[i], men[i]])
+    }
+    return res
+
+}
+
+// Examples
+console.log(zipIt(["Elise", "Mary"], ["John", "Rick"])
+) // ➞ [["Elise", "John"], ["Mary", "Rick"]]
+
+console.log(zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh"])
+) // ➞ "sizes don't match"
+
+console.log(zipIt(["Ana", "Amy", "Lisa"], ["Bob", "Josh", "Tim"])
+) // ➞ [["Ana", "Bob"], ["Amy", "Josh"],["Lisa", "Tim"]]
+
+
+//Q => 44   Create a function that performs an even-odd transform to an array, n times. Each even-odd transformation:
+
+// Adds two (+2) to each odd integer.
+// Subtracts two (-2) from each even integer.
+
+function evenOddTransform(arr, n) {
+    for (let i = 0; i < n; i++) {
+        arr = arr.map(item => item % 2 === 0 ? item - 2 : item + 2)
+    }
+    return arr
+}
+
+function evenOddTransform(arr, n) {
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] % 2 === 0) {
+                arr[j] -= 2
+            } else {
+                arr[j] += 2
+            }
+        }
+    }
+    return arr
+}
+
+function evenOddTransform(arr, n) {
+    let res = arr.map(num => num % 2 === 0 ? num - 2 * n : num + 2 * n)
+    return res
+}
+
+// Examples
+console.log(evenOddTransform([3, 4, 9], 3)) // ➞[9, -2, 15]
+// Since [3, 4, 9] => [5, 2, 11] => [7, 0, 13] => [9, -2, 15]
+
+console.log(evenOddTransform([0, 0, 0], 10)) // ➞[-20, -20, -20]
+
+console.log(evenOddTransform([1, 2, 3], 1)) // ➞[3, 0, 5]
+
+
+// Create a function that takes an array of parallel resistance values, and calculates the total resistance of the circuit.
+// Notes
+// Note that you should rearrange to return the Resistance Total, not 1 / Resistance Total.
+// Round to the nearest decimal place.
+// All inputs will be valid.
+
+function parallelResistance(arr) {
+    let resiprocalSum = arr.reduce((sum, curr) => sum + (1 / curr), 0)
+
+    const totalResistance = 1 / resiprocalSum
+
+    return Math.round(totalResistance * 10) / 10
+}
+
+// Worked Example
+console.log(parallelResistance([6, 3, 6])) // ➞ 1.5
+
+// 1/RTotal = 1/6 + 1/3 + 1/6
+// 1/RTotal = 2/3
+// RTotal = 3/2 = 1.5
+// Examples
+console.log(parallelResistance([6, 3])) // ➞ 2
+
+console.log(parallelResistance([10, 20, 10])) // ➞ 4
+
+console.log(parallelResistance([500, 500, 500])) // ➞ 166.6
+// Round to the nearest decimal place
+
+
+// Write a function that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively.
+
+function mapping(arr) {
+    let obj = {}
+    arr.forEach(item => {
+        obj[item] = item.toUpperCase();
+    })
+    return obj
+}
+
+function mapping(arr) {
+    let obj = {}
+    for (let i = 0; i < arr.length; i++) {
+        obj[arr[i]] = arr[i].toUpperCase()
+    }
+    return obj
+}
+
+function mapping(arr) {
+    return arr.reduce((acc, curr) => {
+        acc[curr] = curr.toUpperCase()
+        return acc
+    }, {})
+}
+
+function mapping(arr){
+    return Object.fromEntries(arr.map(item => [item, item.toUpperCase()]))
+}
+
+// Examples
+console.log(mapping(["p", "s"])) // ➞ { "p": "P", "s": "S" }
+console.log(mapping(["a", "b", "c"])) // ➞ { "a": "A", "b": "B", "c": "C" }
+console.log(mapping(["a", "v", "y", "z"])) // ➞ { "a": "A", "v": "V", "y": "Y", "z": "Z"
