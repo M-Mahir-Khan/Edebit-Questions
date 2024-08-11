@@ -432,7 +432,7 @@ console.log(evenOddTransform([0, 0, 0], 10)) // ➞[-20, -20, -20]
 console.log(evenOddTransform([1, 2, 3], 1)) // ➞[3, 0, 5]
 
 
-// Create a function that takes an array of parallel resistance values, and calculates the total resistance of the circuit.
+//Q => 45 Create a function that takes an array of parallel resistance values, and calculates the total resistance of the circuit.
 // Notes
 // Note that you should rearrange to return the Resistance Total, not 1 / Resistance Total.
 // Round to the nearest decimal place.
@@ -461,7 +461,7 @@ console.log(parallelResistance([500, 500, 500])) // ➞ 166.6
 // Round to the nearest decimal place
 
 
-// Write a function that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively.
+//Q => 46 Write a function that creates an object with each (key, value) pair being the (lower case, upper case) versions of a letter, respectively.
 
 function mapping(arr) {
     let obj = {}
