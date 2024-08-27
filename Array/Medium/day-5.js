@@ -1,4 +1,4 @@
-// Create a function that transforms a string of upvote counts into an array of numbers. Each k represents a thousand.
+//Q => 47 Create a function that transforms a string of upvote counts into an array of numbers. Each k represents a thousand.
 
 function transformUpvotes(str) {
     let res = str.split(" ").map(upvote => {
@@ -10,7 +10,7 @@ function transformUpvotes(str) {
     })
     return res
 }
-
+``
 function transformUpvotes(str) {
     let arr = str.split(" ");
     let res = []
