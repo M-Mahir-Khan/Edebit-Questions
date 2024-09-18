@@ -26,6 +26,7 @@ function countTrue(arr) {
     return count
 }
 
+
 // Examples
 console.log(countTrue([true, false, false, true, false])) // ➞ 2
 console.log(countTrue([false, false, false, false])) // ➞ 0
