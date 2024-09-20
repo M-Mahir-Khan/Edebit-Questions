@@ -414,6 +414,7 @@ function progressDays(arr) {
     return progress
 }
 
+
 function progressDays(arr){
     return arr.slice(1).reduce((progess,run, i)=>{
         return run > arr[i] ? progess + 1 : progess
