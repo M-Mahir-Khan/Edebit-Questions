@@ -5,6 +5,7 @@ function getVoteCount({ upvotes, downvotes }) {
 }
 
 
+
 // Examples
 console.log(getVoteCount({ upvotes: 13, downvotes: 0 })) // ➞ 13
 console.log(getVoteCount({ upvotes: 2, downvotes: 33 })) // ➞ -31
