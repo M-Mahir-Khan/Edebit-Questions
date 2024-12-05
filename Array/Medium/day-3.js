@@ -20,6 +20,7 @@ function isSpecialArray(arr) {
     return true
 }
 
+
 // Examples
 console.log(isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3])) // ➞ true
 // Even indices: [2, 4, 6, 6]; Odd indices: [7, 9, 1, 3]
