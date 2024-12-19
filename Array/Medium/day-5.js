@@ -10,6 +10,7 @@ function transformUpvotes(str) {
     })
     return res
 }
+
 ``
 function transformUpvotes(str) {
     let arr = str.split(" ");
