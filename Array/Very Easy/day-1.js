@@ -14,6 +14,7 @@ console.log(getFirstValue([-500, 0, 50]))// ➞ -500
 
 
 
+
 // Q => 2 Given two arguments, return an array which contains these two arguments.
 
 // function makePair(arg1, arg2) {
